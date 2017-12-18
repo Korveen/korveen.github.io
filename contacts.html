@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <title>Контакты - Пекарь-Бекарь</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/cssreset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body id="upper">
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/logo.png" title="peckar-beckar" alt="peckar-beckar" height="90">
+            </a>
+        </div>
+        <nav id="navigation">
+            <ul class="socialbar">
+                <li>
+                    <a href="#">Карьера</a>
+                </li>|
+                <li>
+                    <a href="https://facebook.com/korveenO" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/korveen_o" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/korveen_o" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/korveen" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menubar">
+                <li>
+                    <a href="catalog.html">Меню</a>
+                </li>
+                <li>
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a class="active-menubar" href="#">Контакты</a>
+                </li>
+                <li>
+                    <a href="cart.html" >Корзина</a>
+                </li>
+            </ul>
+
+            <div class="burger-menu">
+                <a href="#">
+                    <i class="fa fa-map-marker fa-lg mobile-map"></i>
+                </a>
+                <input type="checkbox" id="checkbox" class="burger-checkbox">
+                <label for="checkbox" class="burger-btn-container">
+                    <i class="fa fa-navicon burger-btn fa-lg"></i>
+                </label>
+                <div class="burger-container">
+                    <ul class="burger-list">
+                        <li class="burger-item">
+                            <a href="catalog.html" class="burger-link">Меню</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="services.html" class="burger-link">Услуги</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="about.html" class="burger-link">О Нас</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="#" class="burger-link">Контакты</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="cart.html" class="burger-link">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <figure class="page-banner-small">
+                <img src="img/contacts-banner.jpg" alt="Contacts">
+                <figcaption class="banner-description">
+                    <h1>Вопросы?</h1>
+                    <p>Мы ответим и поможем разобраться с возникшей проблемой</p>
+                </figcaption>
+            </figure>
+        </section>
+        <section>
+            <div class="contacts-title">Контакты</div>
+            <div class="contacts-container">
+                <div>
+                    <p class="contacts-header">Если у вас есть какие-либо вопросы или предложения, пожалуйста, заполните информацию в полях ниже:</p>
+
+                    <form id="contact-form" role='form' action="" method="POST">
+                        <div class="form-group">
+                            <label class="control-label" for="reply-name">Представьтесь, пожалуйста.</label>
+                            <input class="form-control" type="text" name="reply-name" required placeholder="Имя..." />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="email">На какой E-Mail Вам ответить?</label>
+                            <input class="form-control" type="email" name="email" required placeholder="E-Mail" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Если что, мы Вам перезвоним!</label>
+                            <input class="form-control" type="text" name="phone" placeholder="Ваш номер" />
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="">Ваше сообщение:</label>
+                            <textarea rows="10" class="form-control" name="message" required placeholder="Сообщение..."></textarea>
+                        </div>
+
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <button class="btn-rect1" type="submit">Отправить</button>
+                    </form>
+                </div>
+                <div>
+                    <svg class="svg-border">
+                        <polyline points="5,234 5,254 236,254 271,288 307,254 537,254 537,234" fill="rgba(255,255,255,1)" stroke="#990000" stroke-width="10"
+                        />
+                    </svg>
+                    <div class="card-container">
+                        <h3>Наш офис</h3>
+                        <p>7:00 - 22:00 ежедневно</p>
+                        <address>Ул. Немига, д.36, офис 3</address>
+                        <address>+375 44
+                            <strong>7777777</strong>
+                        </address>
+                    </div>
+                    <iframe class="yandex-map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9667697ffc02fc0b189af7f7a5ba9d20ebc1c22bb3d9bff330f214bfef3b9909&amp;source=constructor" width="540" height="340" frameborder="0"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div id="contacts-success-wrapper" class="wrapper-message" style="display:none">
+        <div class="container-message">
+            <p>Сообщение отправлено!</p>
+        </div>
+    </div>
+    <div id="contacts-error-wrapper" class="wrapper-message" style="display:none">
+        <div class="container-message">
+            <p>Не удалось отправить сообщение!</p>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <figure id="logo-inverse">
+            <a href="index.html">
+                <img src="img/logo-inverse.png" title="peckar-beckar" alt="peckar-beckar" height="90">
+            </a>
+        </figure>
+        <ul class="footer-info">
+            <li>
+                <span>Время работы:</span>
+                <ul>
+                    <li>07:00 - 22:00</li>
+                    <li>Ежедневно</li>
+                    <li>Сандень - первый</li>
+                    <li>день месяца</li>
+                </ul>
+            </li>
+            <li>
+                <span>Мы в социальных сетях:</span>
+                <ul class="footer-socialbar">
+                    <li>
+                        <a href="https://facebook.com/korveenO" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/korveen_o" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/korveen_o" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/korveen" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </footer>
+
+    <footer class="sub-footer">
+        <ul class="add-info">
+            <li>
+                <a href="#">Карьера</a>
+            </li>
+            <li>
+                <a href="#">Юридические данные</a>
+            </li>
+        </ul>
+        <span class="copyright">2017 &copy; Все права защищены.</span>
+    </footer>
+    <div id="arrow-up">
+        <a href="#upper">
+            <i class="fa fa-caret-up fa-2x fa-inverse" aria-hidden="true"></i>
+        </a>
+    </div>
+</body>
+
+</html>

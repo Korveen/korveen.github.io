@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/cssreset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="favicon.png">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.tmpl.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/catalog.js"></script>
+
+    <script id="itemTmpl" type="text/x-jquery-tmpl">
+        <li class="cell">
+            <figure class="catalog-teaser catalog-hover">
+                <img src="img/catalog/catalog${id}.jpg" alt="${name}" title="${name}">
+                <figcaption class="catalog-teaser-text">
+                    <h3>${name}</h3>
+                    <hr>
+                    <p class="catalog-item-category">${categoryname}</p>
+                    <!-- <p class="catalog-item-description">${description}</p> -->
+                    <p class="catalog-item-price">${price}BYN</p>
+                    <a class="btn-cart cart-search" href="catalog-item.html?item=${id}">
+                        <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <button class="btn-cart cart-add btn-cart-transform" data-id="${id}" data-price="${price}" data-title="${name}">
+                        <i class="fa fa-cart-arrow-down fa-lg" aria-hidden="true"></i>
+                    </button>
+                </figcaption>
+            </figure>
+        </li>
+    </script>
+    <script id="itemTmpl-2" type="text/x-jquery-tmpl">
+        <figure class="item-container">
+            <img src="img/catalog/catalog${id}.jpg" alt="${name}" title="${name}">
+            <figcaption>
+                <h3 class="item-header">${name}</h3>
+                <p class="item-category">${categoryname}</p>
+                <hr>
+                <p class="item-description">${description}.</p>
+                <p class="item-description">
+                    <span>Состав: </span>${recipe}.</p>
+
+                <button class="btn-ellipse-1 cart-add" data-id="${id}" data-price="${price}" data-title="${name}">В корзину</button>
+            </figcaption>
+        </figure>
+    </script>
+
+    <title>Меню - Пекарь-Бекарь</title>
+</head>
+
+<body id="upper">
+    <header>
+        <div id="logo">
+            <a href="index.html">
+                <img src="img/logo.png" title="peckar-beckar" alt="peckar-beckar" height="90">
+            </a>
+        </div>
+        <nav id="navigation">
+            <ul class="socialbar">
+                <li>
+                    <a href="#">Карьера</a>
+                </li>|
+                <li>
+                    <a href="https://facebook.com/korveenO" target="_blank">
+                        <i class="fa fa-facebook"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://twitter.com/korveen_o" target="_blank">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/korveen_o" target="_blank">
+                        <i class="fa fa-instagram"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://youtube.com/korveen" target="_blank">
+                        <i class="fa fa-youtube"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="menubar">
+                <li>
+                    <a href="catalog.html">Меню</a>
+                </li>
+                <li>
+                    <a href="services.html">Услуги</a>
+                </li>
+                <li>
+                    <a href="about.html">О нас</a>
+                </li>
+                <li>
+                    <a href="contacts.html">Контакты</a>
+                </li>
+                <li>
+                    <a href="cart.html">Корзина</a>
+                </li>
+            </ul>
+
+            <div class="burger-menu">
+                <a href="#">
+                    <i class="fa fa-map-marker fa-lg mobile-map"></i>
+                </a>
+                <input type="checkbox" id="checkbox" class="burger-checkbox">
+                <label for="checkbox" class="burger-btn-container">
+                    <i class="fa fa-navicon burger-btn fa-lg"></i>
+                </label>
+                <div class="burger-container">
+                    <ul class="burger-list">
+                        <li class="burger-item">
+                            <a href="catalog.html" class="burger-link">Меню</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="services.html" class="burger-link">Услуги</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="about.html" class="burger-link">О Нас</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="contacts.html" class="burger-link">Контакты</a>
+                        </li>
+                        <li class="burger-item">
+                            <a href="cart.html" class="burger-link">Корзина</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="menu-category catalog">
+        <h1>Меню</h1>
+        <ul class="flex-grid categories">
+            <li>
+                <a href="catalog.html?category=1">
+                    <figure class="categories-hover">
+                        <img src="img/category1.png" alt="">
+                        <figcaption class="category-description">
+                            <h3 class="category-name">Хлеб</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html?category=2">
+                    <figure class="categories-hover">
+                        <img src="img/category2.png" alt="">
+                        <figcaption class="category-description">
+                            <h3 class="category-name">Выпечка</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html?category=3">
+                    <figure class="categories-hover">
+                        <img src="img/category3.png" alt="">
+                        <figcaption class="category-description">
+                            <h3 class="category-name">Кондитерские изделия</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html?category=4">
+                    <figure class="categories-hover">
+                        <img src="img/category4.png" alt="">
+                        <figcaption class="category-description">
+                            <h3 class="category-name">Торты</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+            <li>
+                <a href="catalog.html?category=5">
+                    <figure class="categories-hover">
+                        <img src="img/category5.png" alt="">
+                        <figcaption class="category-description">
+                            <h3 class="category-name">Печенье</h3>
+                        </figcaption>
+                    </figure>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section id="item" class="item-wrapper">
+    </section>
+
+    <section class="item-top">
+        <h2>Топ заказов</h2>
+        <div class="catalog-wrapper">
+            <ul id="menu-list" class="catalog-container">
+            </ul>
+        </div>
+    </section>
+    <footer class="main-footer">
+        <figure id="logo-inverse">
+            <a href="index.html">
+                <img src="img/logo-inverse.png" title="peckar-beckar" alt="peckar-beckar" height="90">
+            </a>
+        </figure>
+
+        <ul class="footer-info">
+            <li>
+                <span>Время работы:</span>
+                <ul>
+                    <li>07:00 - 22:00</li>
+                    <li>Ежедневно</li>
+                    <li>Сандень - первый</li>
+                    <li>день месяца</li>
+                </ul>
+            </li>
+            <li>
+                <span>Мы в социальных сетях:</span>
+                <ul class="footer-socialbar">
+                    <li>
+                        <a href="https://facebook.com/korveenO" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/korveen_o" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://instagram.com/korveen_o" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-instagram fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://youtube.com/korveen" target="_blank">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+    </footer>
+    <footer class="sub-footer">
+        <ul class="add-info">
+            <li>
+                <a href="#">Карьера</a>
+            </li>
+            <li>
+                <a href="#">Юридические данные</a>
+            </li>
+        </ul>
+        <span class="copyright">2017 &copy; Все права защищены.</span>
+    </footer>
+    <div id="arrow-up">
+        <a href="#upper">
+            <i class="fa fa-caret-up fa-2x fa-inverse" aria-hidden="true"></i>
+        </a>
+    </div>
+</body>
+
+</html>

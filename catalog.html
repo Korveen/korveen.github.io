@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-    <title>Главная - Пекарь-Бекарь</title>
+    <title>Меню - Пекарь-Бекарь</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/cssreset.css">
@@ -10,7 +10,30 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="shortcut icon" href="favicon.png">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.tmpl.min.js"></script>
     <script src="js/app.js"></script>
+    <script src="js/catalog.js"></script>
+
+    <script id="itemTmpl" type="text/x-jquery-tmpl">
+        <li class="cell">
+            <figure class="catalog-teaser catalog-hover">
+                <img src="img/catalog/catalog${id}.jpg" alt="${name}" title="${name}">
+                <figcaption class="catalog-teaser-text">
+                    <h3>${name}</h3>
+                    <hr>
+                    <p class="catalog-item-category">${categoryname}</p>
+                    <!-- <p class="catalog-item-description">${description}</p> -->
+                    <p class="catalog-item-price">${price} BYN</p>
+                    <a class="btn-cart cart-search" href="catalog-item.html?item=${id}">
+                                <i class="fa fa-eye fa-lg" aria-hidden="true"></i>
+                    </a>
+                    <button class="btn-cart cart-add btn-cart-transform" data-id="${id}" data-price="${price}" data-title="${name}">
+                                <i class="fa fa-cart-arrow-down fa-lg" aria-hidden="true"></i>
+                        </button>
+                </figcaption>
+            </figure>
+        </li>
+    </script>
 </head>
 
 <body id="upper">
@@ -48,7 +71,7 @@
             </ul>
             <ul class="menubar">
                 <li>
-                    <a href="catalog.html">Меню</a>
+                    <a class="active-menubar" href="catalog.html">Меню</a>
                 </li>
                 <li>
                     <a href="services.html">Услуги</a>
@@ -95,87 +118,8 @@
         </nav>
     </header>
     <main>
-        <section>
-            <section class="slider-container">
-                <div class="slider">
-                    <input type="radio" name="slider1" id="slider1-1" checked="checked">
-                    <label for="slider1-1"></label>
-                    <div>
-                        <img src="img/carusel.jpg" alt="Banner image1">
-                    </div>
-                    <label for="slider1-2"></label>
-
-                    <input type="radio" name="slider1" id="slider1-2">
-                    <label for="slider1-2"></label>
-                    <div>
-                        <section>
-                            <h1>Вкусняха 2</h1>
-                            <span>описание</span>
-                        </section>
-                        <img src="img/banner.jpg" alt="Banner image2">
-                    </div>
-                    <label for="slider1-3"></label>
-
-                    <input type="radio" name="slider1" id="slider1-3">
-                    <label for="slider1-3"></label>
-                    <div>
-                        <section>
-                            <h1>Скидос 3</h1>
-                            <span>Описание</span>
-                        </section>
-                        <img src="img/banner.jpg" alt="Banner image3">
-                    </div>
-                    <label for="slider1-1"></label>
-                </div>
-            </section>
-            <ul class="flex-grid col3">
-                <li>
-                    <a href="catalog.html">
-                        <figure class="info-img-teaser">
-                            <img src="img/teaser1.jpg" alt="">
-                            <figcaption class="teaser-text">
-                                <h3>Новые рецепты</h3>
-                                <hr>
-                                <span>Мы всегда думаем о новых способах удовлетворить Вашу тягу к прекрасному.</span>
-                                <br>
-                                <span>СМОТРЕТЬ НОВЫЕ РЕЦЕПТЫ</span>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="catalog.html">
-                        <figure class="info-img-teaser">
-                            <img src="img/teaser2.jpg" alt="">
-                            <figcaption class="teaser-text">
-                                <h3>Топ заказов</h3>
-                                <hr>
-                                <span>Постоянные посетители знают, что стоит купить!</span>
-                                <br>
-                                <span>В КАТАЛОГ</span>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <a href="catalog.html">
-                        <figure class="info-img-teaser">
-                            <img src="img/teaser3.jpg" alt="">
-                            <figcaption class="teaser-text">
-                                <h3>Рекомендуем</h3>
-                                <hr>
-                                <span>Лучшие работы наших пекарей-кондитеров</span>
-                                <br>
-                                <span>СМОТРЕТЬ РЕКОМЕНДУЕМОЕ</span>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </li>
-            </ul>
-        </section>
-        <section class="menu-category">
-            <h1>Наше меню</h1>
-            <p class="description">Ознакомьтесь с нашим ассотиментом свежего хлеба и восхитительных пирожных</p>
+        <section class="menu-category catalog">
+            <h1>Меню</h1>
             <ul class="flex-grid categories">
                 <li>
                     <a href="catalog.html?category=1">
@@ -229,49 +173,12 @@
                 </li>
             </ul>
         </section>
-        <section>
-            <ul class="flex-grid col3">
-                <li>
-                    <a href="about.html">
-                        <figure class="info-img-teaser">
-                            <img src="img/about-us.jpg" alt="">
-                            <figcaption class="teaser-text">
-                                <h3>О НАС</h3>
-                                <hr>
-                                <span>История нашего стремления сделать этот мир вкуснее, ярче и чувственнее.</span>
-                                <br>
-                                <span>ЧИТАТЬ ДАЛЕЕ</span>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </li>
-                <li>
-                    <figure class="info-img-teaser">
-                        <img src="img/map.jpg" alt="">
-                        <figcaption class="teaser-text teaser-map-text">
-                            <i class="fa fa-map-marker fa-3x"></i>
-                            <span>ближайшие пекарни</span>
-                            <h3>ОКОЛО ВАС</h3>
-                            <a href="#" class="btn-map">КАРТА</a>
-                        </figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <a href="contacts.html">
-                        <figure class="info-img-teaser">
-                            <img src="img/contacts.jpg" alt="">
-                            <figcaption class="teaser-text">
-                                <h3>КОНТАКТЫ</h3>
-                                <hr>
-                                <span>Если у Вас есть какие-либо вопросы или предложения, напишите нам.</span>
-                                <br>
-                                <span>НАПИСАТЬ</span>
-                            </figcaption>
-                        </figure>
-                    </a>
-                </li>
+
+        <div class="catalog-wrapper">
+            <ul id="menu-list" class="catalog-container">
             </ul>
-        </section>
+        </div>
+        <button class="btn-ellipse-1 btn-transform">Еще</button>
     </main>
     <footer class="main-footer">
         <figure id="logo-inverse">
@@ -346,7 +253,6 @@
             <i class="fa fa-caret-up fa-2x fa-inverse" aria-hidden="true"></i>
         </a>
     </div>
-
 </body>
 
 </html>
