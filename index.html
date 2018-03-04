@@ -5,73 +5,73 @@
     <title>Vladislav Valentyukevich</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/cssreset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/three.min.js"></script>
+    <script src="js/waves.js"></script>
 </head>
 
-<body class="body-index column">
-    <header>
-        <h1 id="main-header">Vladislav Valentyukevich</h1>
-    </header>
-
-    <section class="group align-center">
-        <h2 id="submain-header">Just the beginning</h2>
-        <p class="small-description">gamedev + design + programming</p>
-        <a href="#"><button class="btn">Coming soon!</button></a>
-    </section>
-    <footer>
-        <ul class="social">
-            <li>
-                <a href="https://instagram.com/korveen_o" target="_blank">
+<body>
+    <div class="body-index flex-container">
+        <header>
+            <h1 id="main-header">Vladislav Valentyukevich</h1>
+        </header>
+        <main>
+            <section class="group align-center">
+                <h2 id="submain-header">Just the beginning</h2>
+                <p class="small-description">web-design + gamedev + programming</p>
+                <a href="#"><button class="btn">Coming soon!</button></a>
+            </section>
+        </main>
+        <footer>
+            <ul class="social">
+                <li>
+                    <a href="https://instagram.com/korveen_o" target="_blank">
                     <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-instagram fa-stack-1x"></i>
                     </span>
                 </a>
-            </li>
-            <li>
-                <a href="https://vk.com/korveen" target="_blank">
+                </li>
+                <li>
+                    <a href="https://vk.com/korveen" target="_blank">
                     <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-vk fa-stack-1x"></i>
                     </span>
                 </a>
-            </li>
-            <li>
-                <a href="https://facebook.com/korveenO" target="_black">
+                </li>
+                <li>
+                    <a href="https://facebook.com/korveenO" target="_black">
                     <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-facebook fa-stack-1x"></i>
                     </span>
                 </a>
-            </li>
-            <li>
-                <a href="https://twitter.com/korveen_o" target="_blank">
+                </li>
+                <li>
+                    <a href="https://twitter.com/korveen_o" target="_blank">
                     <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-twitter fa-stack-1x"></i>
                     </span>
                 </a>
-            </li>
-            <li>
-                <a href="https://www.linkedin.com/in/vladvalentyukevich/" target="_blank">
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/vladvalentyukevich/" target="_blank">
                     <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-linkedin fa-stack-1x"></i>
                     </span>
                 </a>
-            </li>
-        </ul>
-    </footer>
-    <div id="overlay"></div>
-    <ul id="background-scene" class="scene">
-        <li data-depth=".30" class="layer"><img src="img/back1.jpg" class="bgimg"></li>
-    </ul>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <div class="background">
+        <div class="background-gradient"></div>
+    </div>
 </body>
-<script src="js/parallax.js"></script>
-<script>
-    var p = new Parallax(document.getElementById('background-scene'));
-</script>
-
 </html>
