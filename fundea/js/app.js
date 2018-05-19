@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (o < 1) {
             document.body.style.opacity = (o += opStep);
         } else {
+            document.body.style.opacity = '';
             clearInterval(fadeInterval);
         }
     }, 15);

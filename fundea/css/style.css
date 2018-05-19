@@ -1,12 +1,12 @@
 @font-face {
-    font-family: "FuturaBookBTRegular";
-    src: url("../fonts/FuturaBookBTRegular.otf");
+    font-family: "FuturaBookBT";
+    src: url("../fonts/FuturaBookBT.otf");
     font-style: normal;
     font-weight: normal;
 }
 
 * {
-    font-family: "FuturaBookBTRegular";
+    font-family: "FuturaBookBT";
     letter-spacing: 3px;
 }
 
@@ -42,10 +42,6 @@ body {
     right: 0;
 }
 
-.catalog-wrap {
-    margin: 40px 50px;
-}
-
 .background {
     position: absolute;
     top: 0;
@@ -74,26 +70,16 @@ body {
 
 .logo-center {
     margin: 0 auto;
-    max-width: 499px;
-    text-align: justify;
-    font-family: "FuturaBookBTRegular";
-    text-transform: uppercase;
-    color: #ffffff;
+    text-align: center;
+}
+
+.logo-center img {
+    max-width: 500px;
 }
 
 .middle-logo {
     z-index: 10;
-}
-
-.logotext {
-    font-size: 72px;
-    letter-spacing: 40px;
-}
-
-.logotext2 {
-    padding-top: 30px;
-    font-size: 16px;
-    letter-spacing: 15px;
+    margin-left: 50px;
 }
 
 .middle-logo img {
@@ -146,7 +132,7 @@ body {
     position: relative;
     background: #ffffff;
     width: 90%;
-    height: 4px;
+    height: 3px;
     transition: .4s;
     z-index: 1000;
 }
@@ -157,7 +143,7 @@ body {
     position: absolute;
     background: #ffffff;
     width: 100%;
-    height: 4px;
+    height: 3px;
     transition: .4s;
 }
 
@@ -171,7 +157,7 @@ body {
     position: absolute;
     background: #ffffff;
     width: 100%;
-    height: 4px;
+    height: 3px;
     transition: .4s;
 }
 
@@ -213,7 +199,7 @@ body {
     transition: .5s;
     transition-delay: .1s;
     overflow: hidden;
-    background-color: rgba(32, 19, 27, 0.75);
+    background-color: rgba(32, 19, 27, 0.9);
     visibility: hidden;
 }
 
@@ -234,7 +220,8 @@ body {
 }
 
 .mobile-menu-link {
-    font-family: "FuturaBookBTRegular";
+    font-family: "FuturaBookBT";
+    font-weight: lighter;
     font-size: 22px;
     letter-spacing: 6px;
     text-decoration: none;
@@ -245,6 +232,12 @@ body {
 }
 
 .mobile-menu-link:hover {
+    color: #ffffff;
+}
+
+.catalog-cart {
+    margin: auto;
+    margin-right: 30px;
     color: #ffffff;
 }
 
@@ -276,6 +269,7 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    align-items: baseline;
 }
 
 .main-content-right {
@@ -284,16 +278,27 @@ body {
     bottom: 0;
     left: 50%;
     right: 0;
-    padding: 180px 0 200px 50px;
+    padding: 15vh 0 15vh 30px;
 }
-.catalog-item
-{
-    padding: 0 80px;
+
+.catalog-item {
+    padding: 0 60px;
 }
+
 .catalog-item-arrow {
     width: 30px;
     margin: auto 0;
     text-align: center;
+}
+
+.arrow {
+    color: #ffffff;
+    opacity: 1;
+}
+
+.arrow:hover>i {
+    transition: .5s;
+    opacity: 0.5;
 }
 
 .catalog-item-arrow:first-child {
@@ -310,7 +315,7 @@ body {
 
 .catalog-item>h1 {
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .item-description {
@@ -320,22 +325,22 @@ body {
 }
 
 .item-description>h2 {
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .item-description .item-size {
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .item-description .item-price {
     letter-spacing: 5px;
     text-transform: uppercase;
-    font-size: 32px;
+    font-size: 26px;
 }
 
 .size-select {
-    font-size: 18px;
+    font-size: 16px;
     background-color: rgba(255, 255, 255, 0);
     border: none;
 }
@@ -362,28 +367,30 @@ body {
 }
 
 .btn-order:hover {
-    color: #222;
-    background-color: #ffffff;
-    border-color: #222222;
+    background-color: #333333;
+    border-color: #333333;
 }
 
 .item-preview {
-    margin-top: 40px;
-    padding: 40px 0;
+    margin-top: 10vh;
     width: 100%;
 }
-.item-carousel-wrapper
-{
+
+.item-carousel-wrapper {
     display: flex;
 }
+
 .item-preview>img {
-    
     object-fit: cover;
     width: 100%;
     height: auto;
 }
 
-.item-view-more > a {
+.item-view-more {
+    margin-top: 40px;
+}
+
+.item-view-more>a {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -396,16 +403,10 @@ body {
     color: #333333;
 }
 
-.arrow-left {
-    transform: rotate(-90deg);
-}
-
-.arrow-right {
-    transform: rotate(90deg);
-}
-
-.arrow-down {
-    transform: rotate(180deg);
+.arrow-down-anim {
+    position: relative;
+    -webkit-animation: bounce 3s infinite;
+    animation: bounce 3s infinite both;
 }
 
 #order-form {
@@ -462,4 +463,30 @@ body {
     outline: none;
     font-size: 18px;
     text-transform: capitalize;
+}
+
+@keyframes bounce {
+    0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+    75% {
+        -webkit-transform: translate3d(0, -20px, 0);
+        transform: translate3d(0, -20px, 0);
+    }
+    100% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media screen and (max-width:1220px) {
+    .catalog-item {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width:1024px) {
+    .catalog-item {
+        padding: 0;
+    }
 }

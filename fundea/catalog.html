@@ -5,18 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/app.js"></script>    
+    <script src="js/app.js"></script>
     <title>FUNDEA - Catalog</title>
 </head>
 
 <body>
-    <div class="wrapper catalog-wrap">
+    <div class="wrapper">
         <header>
             <div class="upper-logo">
                 <a href="index.html">
-                    <img class="logo-img" src="img/logo.png" title="jY" alt="jY" height="60px">
+                    <img class="logo-img" src="img/logo.png" title="jY" alt="jY" height="40px">
                 </a>
             </div>
             <div class="middle-logo">
@@ -24,28 +25,30 @@
                     <img src="img/logo2.png" alt="FUNDEA jewelry & accessories">
                 </a>
             </div>
-            <nav class="mobile-menu">
-                <input type="checkbox" id="checkbox" class="mobile-menu-checkbox">
-                <label for="checkbox" class="mobile-menu-btn">
-                    <div class="mobile-menu-icon"></div>
-                </label>
-                <div class="mobile-menu-container">
-                    <ul class="mobile-menu-list">
-                        <li class="mobile-menu-item">
-                            <a href="#" class="mobile-menu-link">About</a>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a href="#" class="mobile-menu-link">Cryptocollection</a>
-                        </li>
-                        <li class="mobile-menu-item">
-                            <a href="#" class="mobile-menu-link">Team</a>
-                        </li>
-                        <li class="mobile-menu__item">
-                            <a href="#" class="mobile-menu-link">Blog</a>
-                        </li>
-                    </ul>
+            <div class="flex-content-hor">
+                <div class="catalog-cart">
+                    <i class="fas fa-shopping-cart fa-lg"></i>
                 </div>
-            </nav>
+                <nav class="mobile-menu">
+                    <input type="checkbox" id="checkbox" class="mobile-menu-checkbox">
+                    <label for="checkbox" class="mobile-menu-btn">
+                        <div class="mobile-menu-icon"></div>
+                    </label>
+                    <div class="mobile-menu-container">
+                        <ul class="mobile-menu-list">
+                            <li class="mobile-menu-item">
+                                <a href="#" class="mobile-menu-link">About</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a href="#" class="mobile-menu-link">Cryptocollection</a>
+                            </li>
+                            <li class="mobile-menu-item">
+                                <a href="#" class="mobile-menu-link">Blog</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </header>
 
         <main class="main-content-right flex-content-hor">
@@ -55,12 +58,14 @@
                     <h1>Bracelet</h1>
                     <div class="item-description">
                         <h2>18kt Gold Bracelets</h2>
-                        <p class="item-size">size</p>
-                        <select class="size-select" name="size">
-                            <option value="1">S</option>
-                            <option value="2">M</option>
-                            <option value="3">L</option>
-                        </select>
+                        <div class="flex-content-hor">
+                            <p class="item-size">size</p>
+                            <select class="size-select" name="size">
+                                <option value="1">S</option>
+                                <option value="2">M</option>
+                                <option value="3">L</option>
+                            </select>
+                        </div>
                         <p class="item-price">0,5 BTC</p>
                     </div>
                     <hr>
@@ -69,26 +74,26 @@
 
                 <div class="item-carousel-wrapper">
                     <div class="catalog-item-arrow">
-                        <a href="#">
-                            <img class="arrow-left" src="img/arrow.png" alt="arrow">
+                        <a class="arrow" href="#">
+                            <i class="fas fa-caret-left fa-2x"></i>
                         </a>
                     </div>
                     <figure class="item-preview">
                         <img src="img/catalog/item1.png" alt="item1">
+                        <div class="item-view-more">
+                            <a class="arrow" href="#">
+                                <i class="fas fa-caret-down fa-2x arrow-down-anim"></i>
+                                <p>view more</p>
+                            </a>
+                        </div>
                     </figure>
                     <div class="catalog-item-arrow">
-                        <a href="#">
-                            <img class="arrow-right" src="img/arrow.png" alt="arrow">
+                        <a class="arrow" href="#">
+                            <i class="fas fa-caret-right fa-2x"></i>
                         </a>
                     </div>
                 </div>
-                <div class="item-view-more">
-                    <a href="#">
-                        <img class="arrow-down" src="img/arrow.png" alt="arrow">
-                        <p>view more</p>
-                    </a>
 
-                </div>
             </div>
 
         </main>
