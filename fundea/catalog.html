@@ -19,7 +19,9 @@
                 </a>
             </div>
             <div class="middle-logo">
-                <img src="img/logo2.png" alt="FUNDEA jewelry & accessories">
+                <a href="index.html">
+                    <img src="img/logo2.png" alt="FUNDEA jewelry & accessories">
+                </a>
             </div>
             <nav class="mobile-menu">
                 <input type="checkbox" id="checkbox" class="mobile-menu-checkbox">
@@ -46,7 +48,7 @@
         </header>
 
         <main class="main-content-right flex-content-hor">
-            <div class="catalog-item-arrow">[-</div>
+
             <div class="catalog-item-wrap">
                 <section class="catalog-item">
                     <h1>Bracelet</h1>
@@ -60,66 +62,84 @@
                         </select>
                         <p class="item-price">0,5 BTC</p>
                     </div>
+                    <hr>
+                    <button type="submit" class="btn-order">Order</button>
                 </section>
-                <hr>
-                <figure>
-                    <img src="" alt="item1">
-                </figure>
-                <div>view more</div>
+
+                <div class="item-carousel-wrapper">
+                    <div class="catalog-item-arrow">
+                        <a href="#">
+                            <img class="arrow-left" src="img/arrow.png" alt="arrow">
+                        </a>
+                    </div>
+                    <figure class="item-preview">
+                        <img src="img/catalog/item1.png" alt="item1">
+                    </figure>
+                    <div class="catalog-item-arrow">
+                        <a href="#">
+                            <img class="arrow-right" src="img/arrow.png" alt="arrow">
+                        </a>
+                    </div>
+                </div>
+                <div class="item-view-more">
+                    <a href="#">
+                        <img class="arrow-down" src="img/arrow.png" alt="arrow">
+                        <p>view more</p>
+                    </a>
+
+                </div>
             </div>
-            <div class="catalog-item-arrow">-]</div>
+
         </main>
 
     </div>
-    <div class=" background ">
-        <img class="background-img-left " src="img/catalog1.jpg " alt="image ">
-        <img class="background-img bg-cover " src="img/bg2.jpg " alt="background ">
+    <div class="background">
+        <img class="background-img-left" src="img/catalog1.jpg " alt="image ">
+        <img class="background-img bg-cover" src="img/bg2.jpg " alt="background ">
     </div>
 
-    <div class="order-wrapper">
-        <div class="order-container">
-            <p class="order-header">Your order</p>
+    <div class="order-container" style="display: none;">
+        <p class="order-header">Your order</p>
 
-            <form id="order-form" role='form' action="" method="POST">
-                <div class="form-group ">
-                    <label class="control-label" for="reply-name">Name</label>
-                    <input class="form-control" type="text" name="reply-name" required/>
-                    <hr>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="first-name">First name</label>
-                    <input class="form-control" type="text" name="first-name" required/>
-                    <hr>
-                </div>
-                <div class="form-group">
-                    <p class="control-label">Size</p>
-                </div>
-                <div class="form-group">
-                    <label class="control-label" for="material">Material</label>
+        <form id="order-form" role='form' action="" method="POST">
+            <div class="form-group ">
+                <label class="control-label" for="reply-name">Name</label>
+                <input class="form-control" type="text" name="reply-name" required/>
+                <hr>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="first-name">First name</label>
+                <input class="form-control" type="text" name="first-name" required/>
+                <hr>
+            </div>
+            <div class="form-group">
+                <p class="control-label">Size</p>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="material">Material</label>
 
-                    <label class="control-label mini-control" for="material-gold">
-                        <input class="form-control" type="radio" name="material" id="material-gold" value="gold" required checked>Gold
-                    </label>
+                <label class="control-label mini-control" for="material-gold">
+                    <input class="form-control" type="radio" name="material" id="material-gold" value="gold" required checked>Gold
+                </label>
 
-                    <label class="control-label mini-control" for="material-white-gold">
-                        <input class="form-control" type="radio" name="material" id="material-white-gold" value="white-gold" required>White Gold
-                    </label>
+                <label class="control-label mini-control" for="material-white-gold">
+                    <input class="form-control" type="radio" name="material" id="material-white-gold" value="white-gold" required>White Gold
+                </label>
 
-                    <label class="control-label mini-control" for="material-silver">
-                        <input class="form-control" type="radio" name="material" id="material-silver" value="silver" required>Silver
-                    </label>
+                <label class="control-label mini-control" for="material-silver">
+                    <input class="form-control" type="radio" name="material" id="material-silver" value="silver" required>Silver
+                </label>
 
-                    <label class="control-label mini-control" for="material-platin">
-                        <input class="form-control" type="radio" name="material" id="material-platin" value="platin" required>Platin
-                    </label>
-                </div>
+                <label class="control-label mini-control" for="material-platin">
+                    <input class="form-control" type="radio" name="material" id="material-platin" value="platin" required>Platin
+                </label>
+            </div>
 
-                <div class="form-group">
-                    <p class="control-label">Price</p>
-                    <p>1 BTC</p>
-                </div>
-            </form>
-        </div>
+            <div class="form-group">
+                <p class="control-label">Price</p>
+                <p>1 BTC</p>
+            </div>
+        </form>
     </div>
 </body>
 

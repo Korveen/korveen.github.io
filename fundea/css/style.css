@@ -12,6 +12,8 @@
 
 input[type="radio"] {
     -webkit-appearance: checkbox;
+    -moz-appearance: checkbox;
+    appearance: checkbox;
     box-sizing: border-box;
 }
 
@@ -32,7 +34,12 @@ body {
 }
 
 .wrapper {
-    margin: 25px
+    margin: 25px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .catalog-wrap {
@@ -72,6 +79,10 @@ body {
     font-family: "FuturaBookBTRegular";
     text-transform: uppercase;
     color: #ffffff;
+}
+
+.middle-logo {
+    z-index: 10;
 }
 
 .logotext {
@@ -209,7 +220,6 @@ body {
 .mobile-menu-checkbox:checked~.mobile-menu-container {
     opacity: 1;
     visibility: visible;
-    transition-delay: 0s;
 }
 
 .mobile-menu-list {
@@ -252,6 +262,12 @@ body {
     overflow: hidden;
 }
 
+.img-left__type2 {
+    width: Calc(50% - 40px);
+    height: Calc(100% - 80px);
+    margin: 40px;
+}
+
 .bg-cover {
     opacity: 0.65;
 }
@@ -259,7 +275,7 @@ body {
 .flex-content-hor {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .main-content-right {
@@ -268,9 +284,12 @@ body {
     bottom: 0;
     left: 50%;
     right: 0;
-    padding: 180px 50px 200px;
+    padding: 180px 0 200px 50px;
 }
-
+.catalog-item
+{
+    padding: 0 80px;
+}
 .catalog-item-arrow {
     width: 30px;
     margin: auto 0;
@@ -325,18 +344,73 @@ body {
     background: rgba(255, 255, 255, 0.6);
 }
 
+.btn-order {
+    background-color: transparent;
+    border: 2px solid #222222;
+    display: inline-block;
+    outline: none !important;
+    cursor: pointer;
+    color: #fff;
+    background-color: #222222;
+    font-size: 16px;
+    text-transform: capitalize;
+    padding: 10px 30px 10px;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+.btn-order:hover {
+    color: #222;
+    background-color: #ffffff;
+    border-color: #222222;
+}
+
+.item-preview {
+    margin-top: 40px;
+    padding: 40px 0;
+    width: 100%;
+}
+.item-carousel-wrapper
+{
+    display: flex;
+}
+.item-preview>img {
+    
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.item-view-more > a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item-view-more p {
+    margin-top: 20px;
+    text-transform: capitalize;
+    font-size: 16px;
+    color: #333333;
+}
+
+.arrow-left {
+    transform: rotate(-90deg);
+}
+
+.arrow-right {
+    transform: rotate(90deg);
+}
+
+.arrow-down {
+    transform: rotate(180deg);
+}
+
 #order-form {
     font-family: "FuturaBookBTRegular";
     padding: 0 25px;
-}
-
-.order-wrapper {
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
 }
 
 .order-container {
@@ -368,10 +442,11 @@ body {
 .form-group hr {
     margin: 0.3em 0;
 }
-.form-group > .control-label:first-child
-{
+
+.form-group>.control-label:first-child {
     margin-right: 20px;
 }
+
 .control-label.mini-control {
     font-size: 10px;
 }
@@ -379,7 +454,6 @@ body {
 .control-label {
     font-size: 14px;
     color: #333333;
-
 }
 
 .form-control {
