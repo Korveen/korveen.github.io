@@ -1,0 +1,391 @@
+@font-face {
+    font-family: "FuturaBookBTRegular";
+    src: url("../fonts/FuturaBookBTRegular.otf");
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    font-family: "FuturaBookBTRegular";
+    letter-spacing: 3px;
+}
+
+input[type="radio"] {
+    -webkit-appearance: checkbox;
+    box-sizing: border-box;
+}
+
+hr {
+    border-style: solid;
+    color: #555555;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.wrapper {
+    margin: 25px
+}
+
+.catalog-wrap {
+    margin: 40px 50px;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background-color: #ffffff;
+    overflow: hidden;
+}
+
+.background-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.logo-wrapper {
+    display: block;
+    margin-top: 30vh;
+}
+
+.logo-center {
+    margin: 0 auto;
+    max-width: 499px;
+    text-align: justify;
+    font-family: "FuturaBookBTRegular";
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.logotext {
+    font-size: 72px;
+    letter-spacing: 40px;
+}
+
+.logotext2 {
+    padding-top: 30px;
+    font-size: 16px;
+    letter-spacing: 15px;
+}
+
+.middle-logo img {
+    max-width: 230px;
+}
+
+.bg-logo {
+    opacity: 0.15;
+    position: fixed;
+    top: 30vh;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bg-logo>img {
+    height: 40vh;
+}
+
+/* MOBILE MENU */
+
+.mobile-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    z-index: 9999999;
+}
+
+.mobile-menu-checkbox {
+    display: none;
+}
+
+.mobile-menu-btn {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.mobile-menu-icon {
+    display: block;
+    position: relative;
+    background: #ffffff;
+    width: 90%;
+    height: 4px;
+    transition: .4s;
+    z-index: 1000;
+}
+
+.mobile-menu-icon::before {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: 4px;
+    transition: .4s;
+}
+
+.mobile-menu-icon::before {
+    top: -8px;
+}
+
+.mobile-menu-icon::after {
+    content: "";
+    display: block;
+    position: absolute;
+    background: #ffffff;
+    width: 100%;
+    height: 4px;
+    transition: .4s;
+}
+
+.mobile-menu-icon::after {
+    top: 8px;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-btn .mobile-menu-icon {
+    background: transparent;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-btn .mobile-menu-icon::before,
+.mobile-menu-checkbox:checked~.mobile-menu-btn .mobile-menu-icon::after {
+    top: 0;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-btn .mobile-menu-icon::before {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-btn .mobile-menu-icon::after {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
+
+.mobile-menu-container {
+    position: fixed;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    height: 100%;
+    opacity: 0;
+    transition: .5s;
+    transition-delay: .1s;
+    overflow: hidden;
+    background-color: rgba(32, 19, 27, 0.75);
+    visibility: hidden;
+}
+
+.mobile-menu-checkbox:checked~.mobile-menu-container {
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.mobile-menu-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: -50px;
+}
+
+.mobile-menu-item {
+    font-size: 26px;
+    padding-bottom: 15px;
+}
+
+.mobile-menu-link {
+    font-family: "FuturaBookBTRegular";
+    font-size: 22px;
+    letter-spacing: 6px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #7c7c7c;
+    margin: 20px 0;
+    transition: .1s;
+}
+
+.mobile-menu-link:hover {
+    color: #ffffff;
+}
+
+.background-img-left {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 50%;
+    background-color: rgba(17, 34, 51, 0.164);
+    width: 50%;
+    height: 100%;
+    z-index: 2;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.bg-cover {
+    opacity: 0.65;
+}
+
+.flex-content-hor {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-content-right {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    padding: 180px 50px 200px;
+}
+
+.catalog-item-arrow {
+    width: 30px;
+    margin: auto 0;
+    text-align: center;
+}
+
+.catalog-item-arrow:first-child {
+    margin-right: 50px;
+}
+
+.catalog-item-arrow:last-child {
+    margin-left: 50px;
+}
+
+.catalog-item-wrap {
+    width: 100%;
+}
+
+.catalog-item>h1 {
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.item-description {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.item-description>h2 {
+    font-size: 18px;
+}
+
+.item-description .item-size {
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.item-description .item-price {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-size: 32px;
+}
+
+.size-select {
+    font-size: 18px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+}
+
+.size-select option {
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#order-form {
+    font-family: "FuturaBookBTRegular";
+    padding: 0 25px;
+}
+
+.order-wrapper {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.order-container {
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 260px;
+    margin: auto;
+    width: 580px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 2px solid #000000;
+    outline: 10px solid rgba(255, 255, 255, 0.8);
+}
+
+.order-header {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+.form-group {
+    margin: 15px 0;
+}
+
+.form-group hr {
+    margin: 0.3em 0;
+}
+.form-group > .control-label:first-child
+{
+    margin-right: 20px;
+}
+.control-label.mini-control {
+    font-size: 10px;
+}
+
+.control-label {
+    font-size: 14px;
+    color: #333333;
+
+}
+
+.form-control {
+    background-color: #ffffff00;
+    border: 0px;
+    outline: none;
+    font-size: 18px;
+    text-transform: capitalize;
+}
