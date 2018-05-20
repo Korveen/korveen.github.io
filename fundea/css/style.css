@@ -7,7 +7,7 @@
 
 * {
     font-family: "FuturaBookBT";
-    letter-spacing: 3px;
+    letter-spacing: 2px;
 }
 
 input[type="radio"] {
@@ -34,7 +34,7 @@ body {
 }
 
 .wrapper {
-    margin: 25px;
+    padding: 25px;
     position: fixed;
     top: 0;
     bottom: 0;
@@ -43,7 +43,7 @@ body {
 }
 
 .background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
@@ -61,6 +61,10 @@ body {
     height: 100%;
     background-size: cover;
     object-fit: cover;
+}
+
+.upper-logo {
+    z-index: 10;
 }
 
 .logo-wrapper {
@@ -109,7 +113,7 @@ body {
     left: 0;
     right: 0;
     height: 50px;
-    z-index: 9999999;
+    z-index: 999;
 }
 
 .mobile-menu-checkbox {
@@ -239,30 +243,29 @@ body {
     margin: auto;
     margin-right: 30px;
     color: #ffffff;
+    z-index: 999;
 }
 
-.background-img-left {
+.left-side {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 50%;
-    background-color: rgba(17, 34, 51, 0.164);
-    width: 50%;
-    height: 100%;
-    z-index: 2;
-    object-fit: cover;
+    background-color: rgba(0, 0, 0, 1);
+    z-index: 1;
     overflow: hidden;
 }
 
-.img-left__type2 {
-    width: Calc(50% - 40px);
-    height: Calc(100% - 80px);
-    margin: 40px;
+.left-side-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    opacity: 0.8;
 }
 
 .bg-cover {
-    opacity: 0.65;
+    opacity: 0.50;
 }
 
 .flex-content-hor {
@@ -272,13 +275,13 @@ body {
     align-items: baseline;
 }
 
-.main-content-right {
+.right-side {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 50%;
     right: 0;
-    padding: 15vh 0 15vh 30px;
+    padding: 15vh 25px 15vh 25px;
 }
 
 .catalog-item {
@@ -373,14 +376,18 @@ body {
 
 .item-preview {
     margin-top: 10vh;
-    width: 100%;
 }
 
 .item-carousel-wrapper {
     display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
 }
 
 .item-preview>img {
+    display: block;
+    margin: auto;
     object-fit: cover;
     width: 100%;
     height: auto;
@@ -480,13 +487,96 @@ body {
     }
 }
 
+@media all and (orientation: landscape) and (max-width: 768px) {
+    body {
+        overflow: scroll;
+    }
+    .wrapper {
+        position: absolute;
+    }
+}
+
 @media screen and (max-width:1220px) {
     .catalog-item {
         padding: 0 30px;
     }
 }
+
 @media screen and (max-width:1024px) {
     .catalog-item {
         padding: 0;
+    }
+    .catalog-item>h1 {
+        font-size: 22px;
+    }
+    .item-description .item-price {
+        font-size: 22px;
+    }
+}
+
+@media screen and (max-width:1024px) and (min-width: 768px) {
+    .btn-order {
+        font-size: 12px;
+        padding: 5px 25px 5px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .catalog-cart {
+        margin-right: 15px;
+    }
+    .middle-logo img {
+        max-width: 230px;
+    }
+    .logo-center img {
+        max-width: 85%;
+    }
+    .left-side {
+        right: 0;
+        bottom: 55%;
+    }
+    .right-side {
+        left: 0;
+        top: 45%;
+        padding: 20px 25px;
+    }
+    .item-preview {
+        margin-top: 25px;
+    }
+    .item-view-more {
+        margin-top: 20px;
+    }
+    .item-view-more p {
+        margin-top: 5px;
+    }
+}
+
+@media screen and (max-width:768px) and (min-width: 580px) {
+    .item-carousel-wrapper {
+        width: 80%;
+    }
+    .item-preview>img {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width:580px) {
+    .item-carousel-wrapper {
+        width: 100%;
+    }
+    .item-preview>img {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .middle-logo {
+        display: none;
+    }
+    .wrapper {
+        padding: 15px;
+    }
+    .right-side {
+        padding: 15px;
     }
 }
