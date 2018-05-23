@@ -67,9 +67,12 @@ $(function () {
             opacity: 0
         }, 300, function () {
             i_image.attr('src', 'img/catalog/' + Object.keys(images)[cur_image] + '/' + images[Object.keys(images)[cur_image]][cur_item]);
-            i_image.animate({
-                opacity: 1
-            }, 300);
+
+            i_image.on('load', function () {
+                i_image.animate({
+                    opacity: 1
+                }, 300);
+            });
         });
 
 
@@ -81,8 +84,7 @@ $(function () {
     $(document.body).css("opacity", 0);
     $(document.body).animate({
         opacity: 1
-    }, 1000);
-
+    }, 2000);
 
     //=== обработчик нажатия на задний фон => скрываем мобильное меню
     var menuCover = $('.mobile-menu-container');
@@ -98,7 +100,7 @@ $(function () {
 
         if (cur_image <= 0)
             cur_image = 0;
-            
+
         refresh();
     });
 
@@ -114,7 +116,7 @@ $(function () {
     i_more_arr.click(function (e) {
         cur_item++;
 
-        if(cur_item >= images[Object.keys(images)[cur_image]].length)
+        if (cur_item >= images[Object.keys(images)[cur_image]].length)
             cur_item = 0;
 
         refresh();
