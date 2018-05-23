@@ -51,6 +51,9 @@ $(function () {
         cur_item = 0;
 
     var refresh = function () {
+        // console.log(cur_image);
+        // console.log(cur_item);
+
         if (cur_image == 0)
             i_prev_arr.css('visibility', 'hidden');
         else
@@ -61,17 +64,23 @@ $(function () {
         else
             i_next_arr.css('visibility', 'visible');
 
-        i_title.html(Object.keys(images)[cur_image]);
-
         i_image.animate({
             opacity: 0
         }, 300, function () {
+
+            // console.log('loading image');
+
             i_image.attr('src', 'img/catalog/' + Object.keys(images)[cur_image] + '/' + images[Object.keys(images)[cur_image]][cur_item]);
 
             i_image.on('load', function () {
+                // console.log('complete');
+
+                i_title.html(Object.keys(images)[cur_image]);
+
                 i_image.animate({
                     opacity: 1
                 }, 300);
+                i_image.off('load');
             });
         });
 
