@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/fontawesome-all.min.css">
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/app.js"></script>
     <title>FUNDEA - Catalog</title>
 </head>
@@ -57,9 +58,9 @@
         <div class="right-side">
             <main class="catalog-item-wrap">
                 <section class="catalog-item">
-                    <h1>Bracelet</h1>
+                    <h1 id="title">Bracelet</h1>
                     <div class="item-description">
-                        <h2>18kt Gold Bracelets</h2>
+                        <h2 id="description">18kt Gold Bracelets</h2>
                         <div class="flex-content-hor">
                             <p class="item-size">size</p>
                             <select class="size-select" name="size">
@@ -68,7 +69,7 @@
                                 <option value="3">L</option>
                             </select>
                         </div>
-                        <p class="item-price">0,5 BTC</p>
+                        <p id="price" class="item-price">0,5 BTC</p>
                     </div>
                     <hr>
                     <button type="submit" class="btn-order">Order</button>
@@ -76,23 +77,23 @@
 
                 <div class="item-carousel-wrapper">
                     <div class="catalog-item-arrow">
-                        <a class="arrow" href="#">
+                        <div id="prev-arrow" class="arrow">
                             <i class="fas fa-caret-left fa-2x"></i>
-                        </a>
+                        </div>
                     </div>
                     <figure class="item-preview">
-                        <img src="img/catalog/item1.png" alt="item1">
+                        <img id="image" src="img/catalog/item1.png" alt="item1">
                         <div class="item-view-more">
-                            <a class="arrow" href="#">
+                            <div id="more-arrow" class="arrow">
                                 <i class="fas fa-caret-down fa-2x arrow-down-anim"></i>
                                 <p>view more</p>
-                            </a>
+                            </div>
                         </div>
                     </figure>
                     <div class="catalog-item-arrow">
-                        <a class="arrow" href="#">
+                        <div id="next-arrow" class="arrow">
                             <i class="fas fa-caret-right fa-2x"></i>
-                        </a>
+                        </div>
                     </div>
                 </div>
 

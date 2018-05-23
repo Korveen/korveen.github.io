@@ -295,6 +295,10 @@ body {
 }
 
 .arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
     color: #ffffff;
     opacity: 1;
 }
@@ -397,12 +401,6 @@ body {
     margin-top: 40px;
 }
 
-.item-view-more>a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 .item-view-more p {
     margin-top: 20px;
     text-transform: capitalize;
@@ -490,6 +488,7 @@ body {
 @media all and (orientation: landscape) and (max-width: 768px) {
     body {
         overflow: scroll;
+        overflow-x: hidden;
     }
     .wrapper {
         position: absolute;
