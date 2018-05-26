@@ -1,22 +1,46 @@
+var interval;
+var timing = 4000;
+var response = false;
+
 $(function () {
-    var inputs = $('[name=slider]');
-    var curNum = 0;
-    var timing = 4000;
-
-    prevItem = inputs[curNum];
-
-    var interval = setInterval(function () {
-        inputs[curNum].removeAttribute('checked');
-
-        curNum++;
-
-        if (curNum == inputs.length)
-            curNum = 0;
-
-        inputs[curNum].setAttribute('checked', true);
-
-    }, timing);
-
-
     
+
+    if ($(window).width() < 768) {
+        response = true;
+    }
+
+    interval = setInterval(function () {
+        console.log(response)
+        if (!response) {
+            $("#nonresponse").css('display', 'unset');
+            $("#response").css('display', 'none');
+
+            $('.slider #nonresponse > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('.slider #nonresponse');
+        } else {
+            $("#nonresponse").css('display', 'none');
+            $("#response").css('display', 'unset');
+
+            $('.slider #response > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('.slider #response');
+        }
+    }, timing);
 });
+
+$(window).resize(function () {
+    console.log(response)
+    if ($(window).width() < 768)
+        response = true;
+    else
+        response = false;
+
+});
+

@@ -284,31 +284,8 @@ body {
     height: 100vh;
     position: relative;
     text-align: center;
-}
-
-.slider>input {
-    display: none;
-}
-
-.slider>input+label {
-    display: inline-block;
-    width: 30px;
-    height: 7px;
-    background: rgba(255, 255, 255, 0.5);
-    cursor: pointer;
-    z-index: 5;
-    position: relative;
-    top: 50%;
-    margin-right: 5px;
-    transition: background 0.8s ease-in-out 0s;
-}
-
-.slider>input+label:hover {
-    background: rgba(255, 255, 255, 0.75);
-}
-
-.slider>input:checked+label {
-    background: rgba(255, 255, 255, 0.75);
+    display: flex;
+    justify-content: space-between;
 }
 
 .slider div {
@@ -320,30 +297,10 @@ body {
     z-index: 0;
 }
 
-.slider>div {
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.8s ease-in-out 0.1s, visibility 0.1s ease-in-out 0.9s;
-}
-
-.slider>input:checked+label+div {
-    visibility: visible;
-    opacity: 1;
-    transition: opacity 0.8s ease-in-out 0.1s, visibility 0.1s ease-in-out 0s;
-}
-
-.slider>input+label+div+label {
-    display: none;
-}
-
-.slider>input:checked+label+div+label {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 50;
+.slider div>img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
 /* !CAROUSEL */
@@ -662,18 +619,6 @@ body {
     .item-preview>img {
         width: 100%;
     }
-    .slider .carusel-wrapper:nth-child(1) li:nth-child(1) {
-        display: none;
-    }
-    .slider .carusel-wrapper:nth-child(1) li:nth-child(3) {
-        display: none;
-    }
-    .slider .carusel-wrapper:nth-child(2) li:nth-child(2) {
-        display: none;
-    }
-    .slider .carusel-wrapper:nth-child(2) li:nth-child(3) {
-        display: none;
-    }
     .logo-wrapper {
         margin-top: 25vh;
     }
@@ -682,6 +627,9 @@ body {
     }
     .carusel-wrapper {
         margin-top: 50px;
+    }
+    .slider div {
+        margin-top: 5%;
     }
 }
 
@@ -713,12 +661,10 @@ body {
 }
 
 @media screen and (max-width:425px) and (max-height:850px) {
-    .carusel-wrapper
-    {
+    .carusel-wrapper {
         margin-top: 100px;
     }
-    .carousel-announce
-    {
+    .carousel-announce {
         padding-top: 75px;
     }
 }
