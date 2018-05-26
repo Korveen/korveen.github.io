@@ -1,9 +1,7 @@
 var images = {
     "bcoinz": [
         "bcoinz-silver.png",
-        "bcoinz.png",
-        "bcoinz2.png",
-        "bcoinz3.png"
+        "bcoinz3.png",
     ],
     "mcoinz": [
         "mcoinz.png",

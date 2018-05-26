@@ -31,6 +31,7 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+    background-color: #f2f2f2;
 }
 
 .wrapper {
@@ -49,7 +50,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    background-color: #ffffff;
+    background-color: #f2f2f2;
     overflow: hidden;
 }
 
@@ -100,7 +101,7 @@ body {
 }
 
 .bg-logo>img {
-    height: 40vh;
+    height: 30vh;
 }
 
 /* MOBILE MENU */
@@ -238,6 +239,112 @@ body {
 .mobile-menu-link:hover {
     color: #ffffff;
 }
+
+/* !MOBILE MENU */
+
+/* CAROUSEL */
+
+.carousel {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.carusel-wrapper {
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.carusel-wrapper li {
+    overflow: hidden;
+}
+
+.carusel-wrapper img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.carousel-announce {
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 4px;
+}
+
+.slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    text-align: center;
+}
+
+.slider>input {
+    display: none;
+}
+
+.slider>input+label {
+    display: inline-block;
+    width: 30px;
+    height: 7px;
+    background: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+    z-index: 5;
+    position: relative;
+    top: 50%;
+    margin-right: 5px;
+    transition: background 0.8s ease-in-out 0s;
+}
+
+.slider>input+label:hover {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.slider>input:checked+label {
+    background: rgba(255, 255, 255, 0.75);
+}
+
+.slider div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+.slider>div {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out 0.1s, visibility 0.1s ease-in-out 0.9s;
+}
+
+.slider>input:checked+label+div {
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.8s ease-in-out 0.1s, visibility 0.1s ease-in-out 0s;
+}
+
+.slider>input+label+div+label {
+    display: none;
+}
+
+.slider>input:checked+label+div+label {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 50;
+}
+
+/* !CAROUSEL */
 
 .catalog-cart {
     margin: auto;
@@ -553,6 +660,18 @@ body {
     .item-preview>img {
         width: 100%;
     }
+    .slider .carusel-wrapper:nth-child(1) li:nth-child(1) {
+        display: none;
+    }
+    .slider .carusel-wrapper:nth-child(1) li:nth-child(3) {
+        display: none;
+    }
+    .slider .carusel-wrapper:nth-child(2) li:nth-child(2) {
+        display: none;
+    }
+    .slider .carusel-wrapper:nth-child(2) li:nth-child(3) {
+        display: none;
+    }
 }
 
 @media screen and (max-width:425px) {
@@ -565,19 +684,15 @@ body {
     .right-side {
         padding: 15px;
     }
-
-    .catalog-item>h1
-    {
+    .catalog-item>h1 {
         text-align: center;
         margin-bottom: 10px;
     }
-    #description
-    {
+    #description {
         margin-bottom: 15px;
         text-align: center;
     }
-    .btn-order
-    {
+    .btn-order {
         padding: 5px 20px 5px;
         font-size: 14px;
     }
@@ -599,6 +714,5 @@ body {
         position: relative;
         top: 0;
         padding: 35px 0;
-
     }
 }
