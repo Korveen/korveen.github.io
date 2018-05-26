@@ -1,8 +1,19 @@
 var images = {
-    "coinz": [
-        "coinz-b.png",
-        "coinz-l.png",
-        "coinz-m.png"
+    "bcoinz": [
+        "bcoinz.png",
+        "bcoinz-silver.png"
+    ],
+    "mcoinz": [
+        "mcoinz.png",
+        "mcoinz-silver.png"
+    ],
+    "lcoinz": [
+        "lcoinz.png",
+        "lcoinz-silver.png"
+    ],
+    "leather": [
+        "leather-gold.png",
+        "leather-silver.png"
     ],
     "cryptologos": [
         "cryptologos-black.png",
@@ -13,6 +24,10 @@ var images = {
         "f-bracelet-black.png",
         "f-bracelet-silver.png",
         "f-bracelet-gold.png"
+    ],
+    "efiriun": [
+        "efiriun-man.png",
+        "efiriun-woman.png"
     ],
     "indes": [
         "indes-black.png",
