@@ -764,9 +764,9 @@ body {
 
 @media all and (orientation: landscape) and (max-height:680px) {
     .logo-wrapper {
-        margin-top: 25vh;
+        margin-top: 20vh;
     }
     .bg-logo {
-        top: 25vh;
+        top: 20vh;
     }
 }
