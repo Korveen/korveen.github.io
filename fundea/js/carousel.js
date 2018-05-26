@@ -10,7 +10,6 @@ $(function () {
     }
 
     interval = setInterval(function () {
-        console.log(response)
         if (!response) {
             $("#nonresponse").css('display', 'unset');
             $("#response").css('display', 'none');
@@ -36,7 +35,6 @@ $(function () {
 });
 
 $(window).resize(function () {
-    console.log(response)
     if ($(window).width() < 768)
         response = true;
     else
