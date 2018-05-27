@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/carousel.js"></script>
     <title>FUNDEA</title>
 </head>
 
@@ -32,62 +31,71 @@
             </div>
         </div>
         <div class="slider">
-            <div id="nonresponse" di>
-                <div>
-                    <ul class="carusel-wrapper">
-                        <li>
-                            <img src="img/catalog/efiriun/efiriun-man.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/l-bracelet/l-bracelet-black.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/leather/leather-gold.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="display: none;">
-                    <ul class="carusel-wrapper">
-                        <li>
-                            <img src="img/catalog/indes/indes-silver.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/indes/indes-gold.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/indes/indes-black.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="display: none;" class="carusel-wrapper">
-                    <p class="carousel-announce">coming soon</p>
-                </div>
-            </div>
-            <div id="response" style="display: none;">
-                <div>
+            <input type="radio" name="slider1" id="slider1-1" checked="checked">
+            <label for="slider1-1"></label>
+            <div>
+                <figure class="slider-img-container">
                     <img src="img/catalog/efiriun/efiriun-man.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/l-bracelet/l-bracelet-black.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/leather/leather-gold.png" alt="">
-                </div>
+                </figure>
+            </div>
+            <label for="slider1-2"></label>
 
-                <div style="display: none;">
+            <input type="radio" name="slider1" id="slider1-2">
+            <label for="slider1-2"></label>
+            <div>
+                <figure class="slider-img-container">
+                    <img src="img/catalog/l-bracelet/l-bracelet-black.png" alt="">
+                </figure>
+            </div>
+            <label for="slider1-3"></label>
+
+            <input type="radio" name="slider1" id="slider1-3">
+            <label for="slider1-3"></label>
+            <div>
+                <figure class="slider-img-container">
+                    <img src="img/catalog/leather/leather-gold.png" alt="">
+                </figure>
+            </div>
+            <label for="slider1-4"></label>
+
+            <input type="radio" name="slider1" id="slider1-4">
+            <label for="slider1-4"></label>
+            <div>
+                <figure class="slider-img-container">
                     <img src="img/catalog/indes/indes-silver.png" alt="">
-                </div>
-                <div style="display: none;">
+                </figure>
+            </div>
+            <label for="slider1-5"></label>
+
+            <input type="radio" name="slider1" id="slider1-5">
+            <label for="slider1-5"></label>
+            <div>
+                <figure class="slider-img-container">
                     <img src="img/catalog/indes/indes-gold.png" alt="">
-                </div>
-                <div style="display: none;">
+                </figure>
+            </div>
+            <label for="slider1-6"></label>
+
+            <input type="radio" name="slider1" id="slider1-6">
+            <label for="slider1-6"></label>
+            <div>
+                <figure class="slider-img-container">
                     <img src="img/catalog/indes/indes-black.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <p class="carousel-announce">coming soon</p>
-                </div>
+                </figure>
+            </div>
+            <label for="slider1-7"></label>
+
+            <input type="radio" name="slider1" id="slider1-7">
+            <label for="slider1-7"></label>
+            <div class="lg-margin">
+                <p class="order-header">Would you like to own it?</p>
+                <form id="order-form" role='form' action="" method="POST">
+                    <div class="form-group ">
+                        <input class="form-control" placeholder="E-mail" type="text" name="reply-email" required/>
+                        <hr>
+                        <button type="submit" class="form-button btn-order">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

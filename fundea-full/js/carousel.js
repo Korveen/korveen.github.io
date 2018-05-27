@@ -9,29 +9,29 @@ $(function () {
         response = true;
     }
 
-    // interval = setInterval(function () {
-    //     if (!response) {
-    //         $("#nonresponse").css('display', 'unset');
-    //         $("#response").css('display', 'none');
+    interval = setInterval(function () {
+        if (!response) {
+            $("#nonresponse").css('display', 'unset');
+            $("#response").css('display', 'none');
 
-    //         $('.slider #nonresponse > div:first')
-    //             .fadeOut(1000)
-    //             .next()
-    //             .fadeIn(this, 1000)
-    //             .end()
-    //             .appendTo('.slider #nonresponse');
-    //     } else {
-    //         $("#nonresponse").css('display', 'none');
-    //         $("#response").css('display', 'unset');
+            $('.slider #nonresponse > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('.slider #nonresponse');
+        } else {
+            $("#nonresponse").css('display', 'none');
+            $("#response").css('display', 'unset');
 
-    //         $('.slider #response > div:first')
-    //             .fadeOut(1000)
-    //             .next()
-    //             .fadeIn(this, 1000)
-    //             .end()
-    //             .appendTo('.slider #response');
-    //     }
-    // }, timing);
+            $('.slider #response > div:first')
+                .fadeOut(1000)
+                .next()
+                .fadeIn(1000)
+                .end()
+                .appendTo('.slider #response');
+        }
+    }, timing);
 });
 
 function fadeIn(elem, duration, callback)
@@ -60,8 +60,6 @@ function fadeIn(elem, duration, callback)
             clearInterval(fadeInterval);
         }
     }, 15);
-    console.log(this);
-    return elem;
 }
 
 $(window).resize(function () {
