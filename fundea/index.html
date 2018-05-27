@@ -20,19 +20,33 @@
             document.getElementById('order-form').addEventListener('submit', function(e) {
                 e.preventDefault();
                 var from_name = document.getElementsByName('reply-email')[0].value;
-                var message_html = '<p>Новый пользователь оставил свой электронный адрес <strong>'+from_name+'</strong> на сайте FUNDEA</p>';
+                let validEmail = false;
+                validEmail = validate(from_name);
+                if(validEmail){
+                    var message_html = '<p>Новый пользователь оставил свой электронный адрес <strong>'+from_name+'</strong> на сайте FUNDEA</p>';
                 
-                emailjs.send("mailgun","template_c0uIZLKn",{name: "JYpostService", notes: "Check this out!", message_html: message_html})
-                    .then(function(response) {
-                    console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
-                }, function(err) {
-                    console.log("FAILED. error=", err);
-                });
-                return false;
+                    emailjs.send("mailgun","template_c0uIZLKn",{name: "JYpostService", notes: "Check this out!", message_html: message_html})
+                        .then(function(response) {
+                        console.log("SUCCESS. status=%d, text=%s", response.status, response.text);
+                    }, function(err) {
+                        console.log("FAILED. error=", err);
+                    });
+                    return false;
+                    
+                } else {
+                    return false;
+                }
             });
         });
             
-        
+        function validate(email) {
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            //var address = document.forms[form_id].elements[email].value;
+            if(reg.test(email) == false) {
+                alert('Введите корректный e-mail');
+                return false;
+            }
+        }
         
         
     </script>
