@@ -52,13 +52,13 @@ header {
 body {
     width: 100vw;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
     background-color: #f2f2f2;
 }
 
 .wrapper {
     padding: 25px;
-    position: fixed;
+    position: relative;
     top: 0;
     bottom: 0;
     left: 0;
@@ -77,7 +77,7 @@ body {
 }
 
 .upper-logo {
-    z-index: 10;
+    z-index: 999;
 }
 
 .logo-img {
@@ -123,48 +123,9 @@ body {
 
 /* CAROUSEL */
 
-.carousel {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-}
-
-.carusel-wrapper {
-    margin-top: 80px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-    justify-content: space-around;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
-.carusel-wrapper li {
-    overflow: hidden;
-}
-
-.carusel-wrapper img {
-    width: 100%;
-    height: auto;
-    -o-object-fit: cover;
-    object-fit: cover;
-}
-
-.carousel-announce {
-    text-transform: uppercase;
-    font-size: 2em;
-    letter-spacing: 4px;
-    white-space: nowrap;
-    padding-top: 70px;
-}
-
 .slider {
     width: 100%;
-    height: 100vh;
+    height: 37vh;
     position: relative;
     text-align: center;
     display: -webkit-box;
@@ -173,6 +134,7 @@ body {
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
+    padding: 50px 0 150px;
 }
 
 .slider>input {
@@ -276,6 +238,10 @@ body {
     animation: bounce 3s infinite both;
 }
 
+.order-countainer {
+    padding-bottom: 50px;
+}
+
 #order-form {
     font-family: "FuturaBookBTRegular";
     padding: 0 25px;
@@ -322,7 +288,7 @@ body {
 }
 
 .lg-margin {
-    margin-top: 15vh !important;
+    margin-top: 35vh !important;
 }
 
 @-webkit-keyframes bounce {
@@ -377,6 +343,9 @@ body {
     .btn-order {
         font-size: 26px;
     }
+    .slider {
+        padding: 150px 0 280px;
+    }
 }
 
 @media screen and (max-width:768px) {
@@ -401,6 +370,9 @@ body {
     .item-view-more p {
         margin-top: 5px;
     }
+    .slider {
+        padding: 0px 0 150px;
+    }
 }
 
 @media screen and (max-width:580px) {
@@ -414,10 +386,13 @@ body {
         margin-top: 50px;
     }
     .slider>div {
-        margin-top: 30px;
+        /* margin-top: 30px; */
     }
     .order-header {
         font-size: 15px;
+    }
+    .slider {
+        padding: 200px 0 50px;
     }
 }
 
@@ -438,9 +413,14 @@ body {
     .carousel-announce {
         font-size: 1.5em;
     }
+    .slider {
+        padding: 150px 0 0;
+    }
 }
 
-@media screen and (max-width:425px) and (max-height:850px) {
+/* 6/7/8 iphone */
+
+@media screen and (max-width:425px) and (max-height:799px) {
     .carusel-wrapper {
         margin-top: 100px;
     }
@@ -451,10 +431,35 @@ body {
         padding-top: 20%;
     }
     .lg-margin {
-        margin-top: 25vh !important
+        margin-top: 25vh !important;
     }
-    .slider>div {
-        margin-top: 20vh;
+    .slider {
+        padding: 70px 0 50px;
+    }
+}
+
+/* iphone 6+/7+/8+/x*/
+
+@media screen and (max-width:530px) and (min-height:730px) {
+    .order-countainer {
+        padding-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .order-countainer {
+        padding-bottom: 50px;
+    }
+}
+
+/* iphone 4 */
+
+@media screen and (max-width: 320px) and (max-height: 480px) {
+    .slider {
+        padding: 0 0 50px;
+    }
+    .order-countainer {
+        padding-bottom: 25px;
     }
 }
 
