@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/cssreset.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script src="js/carousel.js"></script>
+    <script src="js/app.js"></script>
     <title>FUNDEA</title>
 </head>
 
@@ -18,79 +18,44 @@
         <header>
             <div class="upper-logo">
                 <a href="index.html">
-                    <img class="logo-img" src="img/logo-invert.png" title="jY" alt="jY">
+                    <img class="logo-img" src="img/logo.png" title="jY" alt="jY" height="40px">
                 </a>
             </div>
 
+            <nav class="mobile-menu">
+                <input type="checkbox" id="checkbox" class="mobile-menu-checkbox">
+                <label for="checkbox" class="mobile-menu-btn">
+                    <div class="mobile-menu-icon"></div>
+                </label>
+                <div class="mobile-menu-container">
+                    <ul class="mobile-menu-list">
+                        <li class="mobile-menu-item">
+                            <a href="#" class="mobile-menu-link">About</a>
+                        </li>
+                        <li class="mobile-menu-item">
+                            <a href="catalog.html" class="mobile-menu-link">Cryptocollection</a>
+                        </li>
+                        <li class="mobile-menг-item">
+                            <a href="#" class="mobile-menu-link">Blog</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
         </header>
         <div class="logo-wrapper">
             <div class="logo-center">
-                <img src="img/logo2-invert.png" alt="FUNDEA">
+               <img src="img/logo2.png" alt="FUNDEA">
             </div>
             <div class="bg-logo">
-                <img src="img/logo-invert.png" alt="logo">
+                <img src="img/logo.png" alt="logo">
             </div>
-        </div>
-        <div class="slider">
-            <div id="nonresponse" di>
-                <div>
-                    <ul class="carusel-wrapper">
-                        <li>
-                            <img src="img/catalog/efiriun/efiriun-man.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/l-bracelet/l-bracelet-black.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/leather/leather-gold.png" alt="">
-                        </li>
-                    </ul>
-                </div>
 
-                <div style="display: none;">
-                    <ul class="carusel-wrapper">
-                        <li>
-                            <img src="img/catalog/indes/indes-silver.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/indes/indes-gold.png" alt="">
-                        </li>
-                        <li>
-                            <img src="img/catalog/indes/indes-black.png" alt="">
-                        </li>
-                    </ul>
-                </div>
-
-                <div style="display: none;" class="carusel-wrapper">
-                    <p class="carousel-announce">coming soon</p>
-                </div>
-            </div>
-            <div id="response" style="display: none;">
-                <div>
-                    <img src="img/catalog/efiriun/efiriun-man.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/l-bracelet/l-bracelet-black.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/leather/leather-gold.png" alt="">
-                </div>
-
-                <div style="display: none;">
-                    <img src="img/catalog/indes/indes-silver.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/indes/indes-gold.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <img src="img/catalog/indes/indes-black.png" alt="">
-                </div>
-                <div style="display: none;">
-                    <p class="carousel-announce">coming soon</p>
-                </div>
-            </div>
         </div>
     </div>
+    <div class="background">
+        <img class="background-img" src="img/bg1.jpg" alt="background">
+    </div>
+
 </body>
 
 </html>
