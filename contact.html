@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Contact // Vladislav Valentyukevich</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/cssreset.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/ofi.min.js"></script>
+    <script src="js/app.js"></script>
+</head>
+
+<body class="body-page">
+    <header>
+        <h1 class="logo"><a href="index.html">Vladislav V.</a></h1>
+        <nav class="menubar">
+            <div class="toggle-menu">
+                <hr>
+                <input type="checkbox" id="checkbox" class="toggle-checkbox">
+                <label for="checkbox" class="toggle-button">Menu</label>
+                <div class="toggle-container">
+                    <ul class="toggle-list">
+                        <li><a href="projects.html" class="toggle-item">Projects</a></li>
+                        <li><a href="about.html" class="toggle-item">About</a></li>
+                        <li><a href="contact.html" class="toggle-item active-toggle">Contact</a></li>
+                    </ul>
+                    <hr>
+                </div>
+            </div>
+            <ul class="normal-menu">
+                <li><a class="menu-item" href="projects.html">Projects</a></li>
+                <li><a class="menu-item" href="about.html">About</a></li>
+                <li><a class="menu-item active-menubar" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr>
+    <main>
+        <section>
+            <h2>Questions & Comments</h2>
+            <div class="contact-container">
+                <figure>
+                    <img class="avatar" src="img/avka2.jpg" alt="">
+                </figure>
+                <form id="contact-form" role='form' action="//formspree.io/vladislav.valentyukevich@yandex.com" method="POST">
+                    <div class="form-group">
+                        <label class="control-label" for="reply-name">Name *</label>
+                        <input class="form-control" type="text" name="reply-name" required/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="email">Email Address *</label>
+                        <input class="form-control" type="email" name="email" required/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="subject">Subject *</label>
+                        <input class="form-control" type="text" name="subject" required/>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="message">Message *</label>
+                        <textarea rows="5" class="form-control" name="message" required></textarea>
+                    </div>
+
+                    <input type="text" name="_gotcha" style="display:none" />
+                    <button class="btn-submit" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <hr>
+    <footer class="footer-page">
+        <ul class="social">
+            <li>
+                <a href="https://instagram.com/korveen_o" target="_blank">
+                    <i class="fa fa-instagram fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://vk.com/korveen" target="_blank">
+                    <i class="fa fa-vk fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://facebook.com/korveenO" target="_blank">
+                    <i class="fa fa-facebook fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://twitter.com/korveen_o" target="_blank">
+                    <i class="fa fa-twitter fa-lg"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/vladvalentyukevich/" target="_blank">
+                    <i class="fa fa-linkedin fa-lg"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+
+</html>

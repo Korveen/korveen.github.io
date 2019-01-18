@@ -41,12 +41,14 @@
 
 html {
 	font-family: sans-serif;
+	overflow-x: hidden;
 }
 
 a {
 	text-decoration: none;
 	color: #000;
 }
+
 
 body {
 	-webkit-animation: fade-in 1.5s linear;
@@ -227,7 +229,7 @@ h2 {
 	opacity: 0;
 }
 
-.toggle-checkbox:checked ~ .toggle-container {
+.toggle-checkbox:checked~.toggle-container {
 	margin-top: 0;
 	opacity: 1;
 	transition-delay: 0s;
@@ -246,16 +248,16 @@ h2 {
 	width: 100%;
 }
 
-.menubar > .normal-menu {
+.menubar>.normal-menu {
 	display: flex;
 	justify-content: flex-end;
 }
 
-.menubar > .normal-menu li {
+.menubar>.normal-menu li {
 	margin-right: 30px;
 }
 
-.menubar > .normal-menu li:last-child {
+.menubar>.normal-menu li:last-child {
 	margin: 0;
 }
 
@@ -367,7 +369,7 @@ article {
 	width: 50%;
 }
 
-article > p {
+article>p {
 	font-family: "FuturaPTLight";
 	font-size: 14px;
 	line-height: 1.6em;
@@ -377,7 +379,8 @@ article > p {
 	font-style: normal;
 	margin: 0 0 1em;
 }
-article > p > a{
+
+article>p>a {
 	color: #111 !important;
 }
 
@@ -391,6 +394,33 @@ article > p > a{
 .about-text figure img {
 	height: auto;
 	width: 100%;
+}
+.avatar
+{
+	max-width: 500px;
+}
+
+.about-text_link {
+	color: rgba(70, 70, 70, 1);
+	-webkit-transition: color .15s ease-out;
+	-moz-transition: color .15s ease-out;
+	-ms-transition: color .15s ease-out;
+	-o-transition: color .15s ease-out;
+	transition: color .15s ease-out;
+	padding-bottom: .05em;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(82, 82, 82, .18);
+	-webkit-transition: border-color .15s ease-out, color .15s ease-out;
+	-moz-transition: border-color .15s ease-out, color .15s ease-out;
+	-ms-transition: border-color .15s ease-out, color .15s ease-out;
+	-o-transition: border-color .15s ease-out, color .15s ease-out;
+	transition: border-color .15s ease-out, color .15s ease-out;
+}
+
+.about-text_link:hover {
+	color: rgba(82, 82, 82, .6);
+	border-color: rgba(82, 82, 82, .09);
 }
 
 .about-image-title {
@@ -445,7 +475,7 @@ article > p > a{
 	filter: alpha(opacity=80);
 }
 
-.projects figcaption > .image-title {
+.projects figcaption>.image-title {
 	font-family: "FuturaPTLight";
 	font-size: 14px;
 	line-height: 1.5em;
@@ -455,7 +485,7 @@ article > p > a{
 	color: #707070;
 }
 
-.projects figcaption > .project-title {
+.projects figcaption>.project-title {
 	font-family: "FuturaPTLight";
 	font-size: 14px;
 	line-height: 1.5em;
@@ -474,7 +504,7 @@ article > p > a{
 	margin: 0 -5px auto;
 }
 
-.project-item > img {
+.project-item>img {
 	height: 280px;
 	width: 100%;
 	overflow: hidden;
@@ -491,7 +521,11 @@ article > p > a{
 	flex-basis: 430px !important;
 }
 
-#project-data > section:first-child {
+.img-tall {
+	height: 560px !important;
+}
+
+#project-data>section:first-child {
 	padding-bottom: 0;
 	padding-top: 0;
 }
@@ -620,14 +654,14 @@ textarea {
 	letter-spacing: normal;
 }
 
-.social:hover > li {
+.social:hover>li {
 	opacity: 0.5;
 	filter: alpha(opacity=50);
 	-webkit-transition: -webkit-all 0.3s;
 	transition: all 0.3s ease-out;
 }
 
-.social:hover > li:hover {
+.social:hover>li:hover {
 	opacity: 1;
 	filter: alpha(opacity=100);
 	-webkit-transition: -webkit-all 0.3s;
@@ -644,18 +678,22 @@ textarea {
 		align-items: stretch;
 		text-align: justify;
 	}
+
 	article {
 		margin-top: 30px;
 		margin-left: 0;
 		width: 100%;
 	}
+
 	.about-text figure img {
 		height: auto;
 	}
+
 	.contact-container {
 		flex-direction: column;
 		align-items: stretch;
 	}
+
 	#contact-form {
 		margin-left: 0;
 		width: 100%;
@@ -670,22 +708,27 @@ textarea {
 		margin: 0 auto;
 		padding: 0 30px 30px;
 	}
+
 	header {
 		height: auto;
 		flex-direction: column-reverse;
 		margin-bottom: 0;
 		text-align: center;
 	}
+
 	.logo {
 		margin: 30px 0;
 	}
-	.menubar > .normal-menu {
+
+	.menubar>.normal-menu {
 		display: none;
 	}
-	.menubar > .toggle-menu {
+
+	.menubar>.toggle-menu {
 		display: flex;
 		flex-direction: column-reverse;
 	}
+
 	.social {
 		display: flex;
 		justify-content: center;
@@ -696,19 +739,24 @@ textarea {
 	.body-index {
 		padding-bottom: 40px;
 	}
+
 	.group {
 		padding: 0;
 	}
+
 	#submain-header {
 		margin-bottom: 0;
 	}
+
 	.small-description {
 		margin-bottom: 30px;
 	}
+
 	.btn {
 		padding: 10px 15px 10px;
 		font-size: 13px;
 	}
+
 	.social li {
 		font-size: 0.7em;
 	}
@@ -734,6 +782,7 @@ textarea {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -743,6 +792,7 @@ textarea {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -752,6 +802,7 @@ textarea {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
@@ -761,6 +812,7 @@ textarea {
 	0% {
 		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}

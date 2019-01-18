@@ -1,20 +1,13 @@
 var data, url;
 
-document.addEventListener('DOMContentLoaded', function()
-{
+document.addEventListener('DOMContentLoaded', function () {
     let links = document.querySelectorAll('a.item-hover.ajax-link');
-    links.forEach(link =>
-    {
-        link.addEventListener('click', elem =>
-        {
-            if (url != link.getAttribute('href').substr(1))
-            {
-                if (data == undefined || data == null)
-                {
+    links.forEach(link => {
+        link.addEventListener('click', elem => {
+            if (url != link.getAttribute('href').substr(1)) {
+                if (data == undefined || data == null) {
                     scrollTop(100, LoadInfo(link.getAttribute('href').substr(1)));
-                }
-                else
-                {
+                } else {
                     data.parentNode.removeChild(data);
                     data = null;
                     scrollTop(100, LoadInfo(link.getAttribute('href').substr(1)));
@@ -27,45 +20,34 @@ document.addEventListener('DOMContentLoaded', function()
     SquareImage();
 });
 
-window.onresize = () =>
-{
+window.onresize = () => {
     SquareImage();
 }
 
-function SquareImage()
-{
+function SquareImage() {
     let imgs = document.querySelectorAll('.square-img');
     let imgHeigth = imgs[0].parentElement.offsetWidth;
-    imgs.forEach(img =>
-    {
+    imgs.forEach(img => {
         img.style.height = imgHeigth + 'px';
     });
 }
 
-function LoadInfo(url)
-{
-    ajax.get("./includes/" + url + ".html", function(xhttp)
-    {
+function LoadInfo(url) {
+    ajax.get("./includes/" + url + ".html", function (xhttp) {
         let elem = document.createElement('div');
         elem.innerHTML = xhttp;
         elem.style.overflow = 'hidden';
         data = document.querySelector('main').insertBefore(elem, document.querySelector('main').firstChild);
 
         let l = data.querySelectorAll('.project-controls a');
-        l.forEach(link =>
-        {
-            link.addEventListener("click", elem =>
-            {
-                if (elem.target.getAttribute('href').substr(1) == '')
-                {
-                    scrollTop(200, () =>
-                    {
+        l.forEach(link => {
+            link.addEventListener("click", elem => {
+                if (elem.target.getAttribute('href').substr(1) == '') {
+                    scrollTop(200, () => {
                         data.parentNode.removeChild(data);
                         data = null;
                     });
-                }
-                else
-                {
+                } else {
                     data.parentNode.removeChild(data);
                     data = null;
                     scrollTop(100, LoadInfo(link.getAttribute('href').substr(1)));
@@ -75,16 +57,18 @@ function LoadInfo(url)
 
         let dataHeight = elem.offsetHeight;
 
-        fadeIn(elem, 1000, () =>
-        {
+        fadeIn(elem, 1000, () => {
             elem.style.opacity = 1;
             elem.style.height = '';
         });
+
+        initGallery();
     });
 }
 
-function fadeIn(elem, duration, callback)
-{
+
+
+function fadeIn(elem, duration, callback) {
     let elemMaxHeight = elem.offsetHeight;
     let h = 0;
     let o = 0;
@@ -95,15 +79,11 @@ function fadeIn(elem, duration, callback)
     elem.style.height = 0 + 'px';
     elem.style.opacity = 0;
 
-    let fadeInterval = setInterval(() =>
-    {
-        if (h < elemMaxHeight)
-        {
+    let fadeInterval = setInterval(() => {
+        if (h < elemMaxHeight) {
             elem.style.height = (h += fadeStep) + 'px';
             elem.style.opacity = (o += fadeOpacityStep);
-        }
-        else
-        {
+        } else {
             if (callback != undefined)
                 callback();
             clearInterval(fadeInterval);
@@ -111,17 +91,12 @@ function fadeIn(elem, duration, callback)
     }, 15);
 }
 
-function scrollTop(duration, callback)
-{
+function scrollTop(duration, callback) {
     let scrollStep = -window.scrollY / (duration / 15),
-        scrollInterval = setInterval(() =>
-        {
-            if (window.scrollY != 0)
-            {
+        scrollInterval = setInterval(() => {
+            if (window.scrollY != 0) {
                 window.scrollBy(0, scrollStep);
-            }
-            else
-            {
+            } else {
                 if (callback != undefined)
                     callback();
                 clearInterval(scrollInterval);
@@ -130,8 +105,7 @@ function scrollTop(duration, callback)
 }
 
 var ajax = {
-    x: function()
-    {
+    x: function () {
         if (typeof XMLHttpRequest !== 'undefined')
             return new XMLHttpRequest();
 
@@ -145,57 +119,45 @@ var ajax = {
         ];
 
         var xhr;
-        for (var i = 0; i < versions.length; i++)
-        {
-            try
-            {
+        for (var i = 0; i < versions.length; i++) {
+            try {
                 xhr = new ActiveXObject(versions[i]);
                 break;
-            }
-            catch (e)
-            {}
+            } catch (e) {}
         }
 
         return xhr;
     },
 
-    send: function(url, callback, method, data, async)
-    {
+    send: function (url, callback, method, data, async) {
         if (async === undefined)
             async = true;
 
         var x = ajax.x();
         x.open(method, url, async);
-        x.onreadystatechange = function()
-        {
-            if (x.readyState == 4)
-            {
+        x.onreadystatechange = function () {
+            if (x.readyState == 4) {
                 callback(x.responseText);
             }
         };
 
-        if (method == 'POST')
-        {
+        if (method == 'POST') {
             x.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         }
         x.send(data);
     },
 
-    get: function(url, callback, data, async)
-    {
+    get: function (url, callback, data, async) {
         var query = [];
-        for (var key in data)
-        {
+        for (var key in data) {
             query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
         }
         ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async);
     },
 
-    post: function(url, data, callback, dataType, async)
-    {
+    post: function (url, data, callback, dataType, async) {
         var query = [];
-        for (var key in data)
-        {
+        for (var key in data) {
             query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
         }
         ajax.send(url, callback, 'POST', query.join('&'), async);
@@ -203,8 +165,7 @@ var ajax = {
 };
 
 
-$(document).on('submit', '#contact-form', function(e)
-{
+$(document).on('submit', '#contact-form', function (e) {
     e.preventDefault();
     var replyName = $('input[name=reply-name]'),
         replyName_text = replyName.val(),
@@ -215,32 +176,27 @@ $(document).on('submit', '#contact-form', function(e)
         message = $('textarea[name=message]'),
         message_text = message.val();
 
-    $.ajax(
-    {
+    $.ajax({
         url: "//formspree.io/vladislav.valentyukevich@yandex.com",
         method: "POST",
-        data:
-        {
+        data: {
             _subject: subject_text,
             replyName: replyName_text,
             email: email_text,
             message: message_text
         },
         dataType: "json",
-        beforeSend: function(xhr)
-        {
+        beforeSend: function (xhr) {
             //spinner.show();
         }
-    }).done(function()
-    {
+    }).done(function () {
         alert("done");
         // $("#contacts-success-wrapper").fadeIn("fast", function () {
         //     window.setTimeout(function () {
         //         $("#contacts-success-wrapper").fadeOut("slow");
         //     }, 2000);
         // });
-    }).fail(function()
-    {
+    }).fail(function () {
         alert("fail");
 
         // $("#contacts-error-wrapper").fadeIn("fast", function () {
@@ -248,8 +204,7 @@ $(document).on('submit', '#contact-form', function(e)
         //         $("#contacts-error-wrapper").fadeOut("slow");
         //     }, 2000);
         // });
-    }).always(function()
-    {
+    }).always(function () {
 
         //spinner.hide();
         //$('#contacts-wrapper').remove();
