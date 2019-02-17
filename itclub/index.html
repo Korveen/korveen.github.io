@@ -11,8 +11,10 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" href="scss/styles.css">
     <script src="js/jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="js/slick.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/typed.min.js"></script>
     <script src="js/carousel.js"></script>
+    <script src="js/app.js"></script>
     <title>IT_CLUB</title>
 </head>
 
@@ -35,28 +37,39 @@
         </nav>
 
         <header class="header">
-            <h1 class="header__h1"><img class="header__image" src="img/itclub-logo-alt.svg"/</h1>
-            <p class="header__paragraph"><span class="span span_alternative">Школа информационных технологий </span> <br> для детей и подростков </p>
+            <h1 class="header__h1">
+                <img class="header__image" src="img/itclub-logo-alt.svg" />
+            </h1>
+            <p class="header__paragraph">
+                <span></span>
+            </p>
         </header>
 
         <div class="arrow">
-            <a href="#courses"><span class="arrow__title">Наши курсы</span> </a>
-            <div class="arrow__icon"><i class="fas fa-caret-down fa-2x"></i></div>
-
+            <a href="#courses"><span class="arrow__title">Наши курсы</span>
+                <div class="arrow__icon"><i class="fas fa-caret-down fa-2x"></i></div>
+            </a>
         </div>
 
     </div>
     <nav class="nav-menu">
         <div class="nav-menu__logo"><img src="img/itclub-logo.svg" alt="itclub-logo" height="30px"></div>
-        <ul class="nav-menu__list">
-            <li class="nav-menu__item nav-menu__bracket">{</li>
-            <li class="nav-menu__item"><a href="#about" class="nav-menu__link nav-menu__link_active">О нас</a></li>
-            <li class="nav-menu__item"><a href="#courses" class="nav-menu__link">Курсы</a></li>
-            <li class="nav-menu__item"><a href="#gallery" class="nav-menu__link">Галерея</a></li>
-            <li class="nav-menu__item"><a href="#form" class="nav-menu__link">Оставить заявку</a></li>
-            <li class="nav-menu__item"><a href="#map" class="nav-menu__link">Контакты</a></li>
-            <li class="nav-menu__item nav-menu__bracket">}</li>
-        </ul>
+        <div>
+            <label for="checkbox" class="nav-menu__btn ">
+                <div class="nav-menu__icon"></div>
+            </label>
+            <div class="nav-menu__container">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__item nav-menu__bracket">{</li>
+                    <li class="nav-menu__item"><a href="#about" class="nav-menu__link ">О нас</a></li>
+                    <li class="nav-menu__item"><a href="#courses" class="nav-menu__link">Курсы</a></li>
+                    <li class="nav-menu__item"><a href="#gallery" class="nav-menu__link">Галерея</a></li>
+                    <li class="nav-menu__item"><a href="#form" class="nav-menu__link">Оставить заявку</a></li>
+                    <li class="nav-menu__item"><a href="#map" class="nav-menu__link">Контакты</a></li>
+                    <li class="nav-menu__item nav-menu__bracket">}</li>
+                </ul>
+            </div>
+        </div>
     </nav>
     <main>
         <section id="about" class="section">
@@ -293,17 +306,17 @@
         </section>
         <section id="form" class="section section-bid">
             <h2 class="section__h2 ">Оставить заявку</h2>
-            <span class="span span_header">// Оставьте свое имя и номер телефона, мы свяжемся с Вами </span><span class="span span_blink">|</span>
+            <span class="span span_header">// Оставьте свое имя и номер телефона, мы свяжемся с Вами </span><span class="typed-cursor typed-cursor--blink">|</span>
             <form id="contact-form" class="form" role="form">
                 <div class="big-bracket big-bracket_open-form">{</div>
 
                 <div class="form__group">
                     <label class="control__label" for="reply-name">Имя<span class="span">;</span></label>
-                    <input class="label__input" type="text" name="reply-name" required>
+                    <input class="label__input" type="text" name="reply-name" placeholder="Алексей" required>
                 </div>
                 <div class="form__group">
                     <label class="control__label" for="phone">Телефон<span class="span">;</span></label>
-                    <input class="label__input" type="phone" name="phone" required>
+                    <input class="label__input" type="phone" name="phone" placeholder="+375 (__) ___-__-__" required>
                 </div>
                 <input type="text" name="_gotcha" style="display:none">
                 <button class="button button_submit" type="submit">Оставить заявку</button>

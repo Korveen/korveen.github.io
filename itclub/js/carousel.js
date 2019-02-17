@@ -1,5 +1,4 @@
 $(function () {
-
     $('.center').slick({
         centerMode: true,
         centerPadding: '200px',
@@ -11,17 +10,13 @@ $(function () {
         responsive: [{
                 breakpoint: 768,
                 settings: {
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
+                    centerPadding: '100px',
                 }
             },
             {
-                breakpoint: 480,
+                breakpoint: 660,
                 settings: {
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
+                    centerPadding: '20px',
                 }
             }
         ]
