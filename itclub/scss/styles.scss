@@ -57,8 +57,8 @@ $primary-color: rgba(255, 255, 0, 1);
 $red-color: rgba(255, 0, 0, 1);
 $black-color: #000;
 $gray-color: rgb(102, 102, 102);
-$light-gray-color: #dcdcdc;
-$light2-gray:#cdcdcd;
+$light-gray: #dcdcdc;
+$light2-gray:#bbb;
 $extra-light-gray-color: #e8e8e8;
 $pink-color:rgba(255, 0, 255, 1);
 $active-color:#04afbb;
@@ -591,7 +591,7 @@ b {
     font-size: $font-m;
     margin-bottom: $space-xs;
     text-indent: $space-xs;
-    line-height: 1.2em;
+    line-height: 1.5em;
   }
 
 }
@@ -657,7 +657,7 @@ b {
     border-radius: 10px;
     cursor: pointer;
     padding: 25px 40px;
-    background-color: $light-gray-color;
+    background-color: $light-gray;
 
     font-size: $font-m;
     color: $light2-gray;

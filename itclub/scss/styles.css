@@ -589,11 +589,11 @@ b {
   font-size: 24px;
   margin-bottom: 30px;
   text-indent: 30px;
-  line-height: 1.2em;
+  line-height: 1.5em;
 }
 
 .span {
-  color: #cdcdcd;
+  color: #bbb;
 }
 
 .span_primary {
@@ -648,7 +648,7 @@ b {
   padding: 25px 40px;
   background-color: #dcdcdc;
   font-size: 24px;
-  color: #cdcdcd;
+  color: #bbb;
   -webkit-transition: all .1s ease-out;
   transition: all .1s ease-out;
 }
