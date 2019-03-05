@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/slick-theme.css" />
     <link rel="stylesheet" href="scss/styles.css">
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
     <script src="js/slick.min.js"></script>
     <script src="js/typed.min.js"></script>
     <script src="js/carousel.js"></script>
@@ -38,7 +38,7 @@
 
         <header class="header">
             <h1 class="header__h1">
-                <img class="header__image" src="img/itclub-logo-alt.svg" />
+                <img class="header__image" src="img/itclub-logo-alt.svg" alt="it-club logo" />
             </h1>
             <p class="header__paragraph">
                 <span></span>
@@ -53,7 +53,7 @@
 
     </div>
     <nav class="nav-menu">
-        <div class="nav-menu__logo"><img src="img/itclub-logo.svg" alt="itclub-logo" height="30px"></div>
+        <div class="nav-menu__logo"><img src="img/itclub-logo.svg" alt="it-club logo" height="30"></div>
         <div>
             <label for="checkbox" class="nav-menu__btn ">
                 <div class="nav-menu__icon"></div>
@@ -110,7 +110,13 @@
                 <div class="big-bracket big-bracket_open">{</div>
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="1">
-                        <h3 class="content-summary__title">Мой друг - компьютер!</h3>()<span class="span">{ ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Мой друг - компьютер!</h3>()<span class="span">{ ...
+                                    }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -143,8 +149,14 @@
 
                 <details class="courses__item" open>
                     <summary class="content-summary" tabindex="2">
-                        <h3 class="content-summary__title">Компьютерная графика и графический дизайн</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Компьютерная графика и графический дизайн</h3>()<span
+                                    class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -155,17 +167,17 @@
                             в самых различных сферах современного медиапространства.</p>
                         <p class="content-block__paragraph">
                             Курс разбит на <b>две большие части</b>, в которых изучаются разнообразные графические
-                            пакеты:</br>
+                            пакеты:<br>
                             <b>Adobe Photoshop</b> для создания растровых изображений и <span class="span span_alternative">ретуши
-                                фотографий</span>;</br>
+                                фотографий</span>;<br>
                             <b>Autodesk 3ds Max/Blender</b> для <span class="span span_alternative">разработки
                                 трехмерных моделей</span>
-                            для игр и видеороликов; </br>
+                            для игр и видеороликов; <br>
                             <b>Magicavoxel</b> <span class="span"> -> </span> пакет для создания <span class="span span_alternative">графики
                                 в стиле
-                                игры MineCraft</span>; </br>
+                                игры MineCraft</span>; <br>
                             <b>Mixamo</b> предназначен <span class="span span_alternative">для анимации
-                                человекоподобных персонажей</span>; </br>
+                                человекоподобных персонажей</span>; <br>
                             <b>Adobe Illustrator</b> для
                             разработки и работе с <span class="span span_alternative">векторыими изображениями</span>.</p>
                         <p class="content-block__paragraph">Занятия проводят специалисты сферы графического дизайна с
@@ -188,8 +200,14 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="3">
-                        <h3 class="content-summary__title">Видеомонтаж и операторское искусство</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Видеомонтаж и операторское искусство</h3>()<span
+                                    class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -220,8 +238,14 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="4">
-                        <h3 class="content-summary__title">Веб-дизайн и разработка сайтов</h3>(HTML/CSS)<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Веб-дизайн и разработка сайтов</h3>(HTML/CSS)<span
+                                    class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -255,8 +279,13 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="5">
-                        <h3 class="content-summary__title">Программирование на С</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Программирование на С</h3>()<span class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -291,8 +320,13 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="6">
-                        <h3 class="content-summary__title">Разработка приложений на С#</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Разработка приложений на С#</h3>()<span class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -331,8 +365,14 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="7">
-                        <h3 class="content-summary__title">Программирование на Java и базы данных.</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Программирование на Java и базы данных.</h3>()<span
+                                    class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -370,9 +410,14 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="8">
-                        <h3 class="content-summary__title">Веб-программирование </h3>(PHP, MySQL, JavaScript)<span
-                            class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Веб-программирование </h3>(PHP, MySQL, JavaScript)<span
+                                    class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
@@ -410,30 +455,43 @@
 
                 <details class="courses__item">
                     <summary class="content-summary" tabindex="9">
-                        <h3 class="content-summary__title">Разработка игр на Unity</h3>()<span class="span">{
-                            ... }</span>
+                        <div class="content-summary__flex-container">
+                            <div>
+                                <h3 class="content-summary__title">Разработка игр на Unity</h3>()<span class="span">{
+                                    ... }</span>
+                            </div>
+                            <i class="fas fa-angle-down fa-lg content-summary__arrow"></i>
+                        </div>
                     </summary>
 
                     <div class="content-block">
                         <span class="span">{</span>
                         <p class="content-block__paragraph">
-                            Индустрия игровых развлечений <span class="span">-></span> одна из самых востребованных в современном
+                            Индустрия игровых развлечений <span class="span">-></span> одна из самых востребованных в
+                            современном
                             медиапространстве, и профессия разработчика игр весьма востребована, высокооплачиваемая, а
                             самое главное – очень интересная и захватывающая!
                         </p>
                         <p class="content-block__paragraph">
-                            <b>Игровой движок Unity</b> <span class="span">-></span> лидер в рынке современной игровой индустрии. На нем
-                            разрабатываются игры для всех игровых платформ, включая смартфоны на <b>Android</b> и <b>IOS</b>, а также
-                        <b>игровых консолей</b>.</p>
-                        <p class="content-block__paragraph"> В рамках данного курса изучаются <span class="span span_alternative">тенденции геймдизайна, основы игровой
-                            графики и анимации, разработка кроссплатформенных приложений, отладка различных игровых
-                            систем</span>. Приятным дополнением будут уникальные <span class="span span_alternative">занятия по разработке AR приложений</span>
-                            (<b>дополненная реальность</b>) и <span class="span span_alternative">VR приложений</span> (<b>для шлемов виртуальной реальности Oculus Rift и
-                            HTC Vive</b>).
+                            <b>Игровой движок Unity</b> <span class="span">-></span> лидер в рынке современной игровой
+                            индустрии. На нем
+                            разрабатываются игры для всех игровых платформ, включая смартфоны на <b>Android</b> и <b>IOS</b>,
+                            а также
+                            <b>игровых консолей</b>.</p>
+                        <p class="content-block__paragraph"> В рамках данного курса изучаются <span class="span span_alternative">тенденции
+                                геймдизайна, основы игровой
+                                графики и анимации, разработка кроссплатформенных приложений, отладка различных игровых
+                                систем</span>. Приятным дополнением будут уникальные <span class="span span_alternative">занятия
+                                по разработке AR приложений</span>
+                            (<b>дополненная реальность</b>) и <span class="span span_alternative">VR приложений</span>
+                            (<b>для шлемов виртуальной реальности Oculus Rift и
+                                HTC Vive</b>).
                         </p>
                         <p class="content-block__paragraph">
-                            В процессе разработки экзаменационных проектов <span class="span span_alternative">слушатели объединяются в команды</span> и в
-                            результате представляют свою <span class="span span_alternative">законченную игру для любой платформы</span> на выбор.
+                            В процессе разработки экзаменационных проектов <span class="span span_alternative">слушатели
+                                объединяются в команды</span> и в
+                            результате представляют свою <span class="span span_alternative">законченную игру для любой
+                                платформы</span> на выбор.
                         </p>
                         <p class="content-block__paragraph">
                             Для изучения курса <b>требуется</b> <span class="span span_alternative">изучение
@@ -456,35 +514,35 @@
         <section id="gallery" class="section section-gallery">
             <div class="gallery-block center slider ">
                 <div class="gallery-item">
-                    <img class="gallery__img" src="img/gallery1.jpg">
+                    <img class="gallery__img" src="img/gallery1.jpg" alt="it club gallry photo 1">
                 </div>
                 <div>
-                    <img class="gallery__img" src="img/gallery2.jpg">
+                    <img class="gallery__img" src="img/gallery2.jpg" alt="it club gallry photo 2">
                 </div>
                 <div>
-                    <img class="gallery__img" src="img/gallery3.jpg">
+                    <img class="gallery__img" src="img/gallery3.jpg" alt="it club gallry photo 3">
                 </div>
                 <div>
-                    <img class="gallery__img" src="img/gallery4.jpg">
+                    <img class="gallery__img" src="img/gallery4.jpg" alt="it club gallry photo 4">
                 </div>
                 <div>
-                    <img class="gallery__img" src="img/gallery5.jpg">
+                    <img class="gallery__img" src="img/gallery5.jpg" alt="it club gallry photo 5">
                 </div>
             </div>
         </section>
         <section id="form" class="section section-bid">
             <h2 class="section__h2 ">Оставить заявку</h2>
             <span class="span span_header">// Оставьте свое имя и номер телефона, мы свяжемся с Вами </span><span class="typed-cursor typed-cursor--blink">|</span>
-            <form id="contact-form" class="form" role="form">
+            <form id="contact-form" class="form" role="form" action="https://formspree.io/your@email.com" method="POST">
                 <div class="big-bracket big-bracket_open-form">{</div>
-
                 <div class="form__group">
-                    <label class="control__label" for="reply-name">Имя<span class="span">;</span></label>
-                    <input class="label__input" type="text" name="reply-name" placeholder="Алексей" required>
+                    <label class="control__label" for="name">Имя<span class="span">;</span></label>
+                    <input class="label__input" type="text" name="name" placeholder="Алексей" required>
                 </div>
                 <div class="form__group">
-                    <label class="control__label" for="phone">Телефон<span class="span">;</span></label>
-                    <input class="label__input" type="phone" name="phone" placeholder="+375 (__) ___-__-__" required>
+                    <label class="control__label" for="_replyto">Телефон<span class="span">;</span></label>
+                    <input id="phone" class="label__input" type="phone" name="_replyto" placeholder="+375 (__) ___-__-__"
+                        required>
                 </div>
                 <input type="text" name="_gotcha" style="display:none">
                 <button class="button button_submit" type="submit">Оставить заявку</button>
