@@ -1,6 +1,6 @@
 var data, url;
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     let links = document.querySelectorAll('a.item-hover.ajax-link');
     links.forEach(link => {
         link.addEventListener('click', elem => {
@@ -16,6 +16,8 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     });
+
+
 
     SquareImage();
 });
@@ -33,7 +35,7 @@ function SquareImage() {
 }
 
 function LoadInfo(url) {
-    ajax.get("./includes/" + url + ".html", function (xhttp) {
+    ajax.get("./includes/" + url + ".html", function(xhttp) {
         let elem = document.createElement('div');
         elem.innerHTML = xhttp;
         elem.style.overflow = 'hidden';
@@ -62,7 +64,6 @@ function LoadInfo(url) {
             elem.style.height = '';
         });
 
-        initGallery();
     });
 }
 
@@ -105,7 +106,7 @@ function scrollTop(duration, callback) {
 }
 
 var ajax = {
-    x: function () {
+    x: function() {
         if (typeof XMLHttpRequest !== 'undefined')
             return new XMLHttpRequest();
 
@@ -129,13 +130,13 @@ var ajax = {
         return xhr;
     },
 
-    send: function (url, callback, method, data, async) {
+    send: function(url, callback, method, data, async) {
         if (async === undefined)
             async = true;
 
         var x = ajax.x();
         x.open(method, url, async);
-        x.onreadystatechange = function () {
+        x.onreadystatechange = function() {
             if (x.readyState == 4) {
                 callback(x.responseText);
             }
@@ -147,7 +148,7 @@ var ajax = {
         x.send(data);
     },
 
-    get: function (url, callback, data, async) {
+    get: function(url, callback, data, async) {
         var query = [];
         for (var key in data) {
             query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
@@ -155,7 +156,7 @@ var ajax = {
         ajax.send(url + (query.length ? '?' + query.join('&') : ''), callback, 'GET', null, async);
     },
 
-    post: function (url, data, callback, dataType, async) {
+    post: function(url, data, callback, dataType, async) {
         var query = [];
         for (var key in data) {
             query.push(encodeURIComponent(key) + '=' + encodeURIComponent(data[key]));
@@ -165,7 +166,7 @@ var ajax = {
 };
 
 
-$(document).on('submit', '#contact-form', function (e) {
+$(document).on('submit', '#contact-form', function(e) {
     e.preventDefault();
     var replyName = $('input[name=reply-name]'),
         replyName_text = replyName.val(),
@@ -186,17 +187,17 @@ $(document).on('submit', '#contact-form', function (e) {
             message: message_text
         },
         dataType: "json",
-        beforeSend: function (xhr) {
+        beforeSend: function(xhr) {
             //spinner.show();
         }
-    }).done(function () {
+    }).done(function() {
         alert("done");
         // $("#contacts-success-wrapper").fadeIn("fast", function () {
         //     window.setTimeout(function () {
         //         $("#contacts-success-wrapper").fadeOut("slow");
         //     }, 2000);
         // });
-    }).fail(function () {
+    }).fail(function() {
         alert("fail");
 
         // $("#contacts-error-wrapper").fadeIn("fast", function () {
@@ -204,7 +205,7 @@ $(document).on('submit', '#contact-form', function (e) {
         //         $("#contacts-error-wrapper").fadeOut("slow");
         //     }, 2000);
         // });
-    }).always(function () {
+    }).always(function() {
 
         //spinner.hide();
         //$('#contacts-wrapper').remove();

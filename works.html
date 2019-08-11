@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-    <title>Contact // Vladislav Valentyukevich</title>
+    <title>Projects // Vladislav Valentyukevich</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -13,6 +13,7 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/ofi.min.js"></script>
     <script src="js/app.js"></script>
+
 </head>
 
 <body class="body-page">
@@ -25,17 +26,17 @@
                 <label for="checkbox" class="toggle-button">Menu</label>
                 <div class="toggle-container">
                     <ul class="toggle-list">
-                        <li><a href="works.html" class="toggle-item">Works</a></li>
+                        <li><a href="works.html" class="toggle-item active-toggle">Works</a></li>
                         <li><a href="about.html" class="toggle-item">About</a></li>
-                        <li><a href="contact.html" class="toggle-item active-toggle">Contact</a></li>
+                        <li><a href="contact.html" class="toggle-item">Contact</a></li>
                     </ul>
                     <hr>
                 </div>
             </div>
             <ul class="normal-menu">
-                <li><a class="menu-item" href="works.html">Works</a></li>
+                <li><a class="menu-item active-menubar" href="works.html">Works</a></li>
                 <li><a class="menu-item" href="about.html">About</a></li>
-                <li><a class="menu-item active-menubar" href="#">Contact</a></li>
+                <li><a class="menu-item" href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -43,36 +44,52 @@
         <hr>
         <main>
             <section>
-                <h2>Questions & Comments</h2>
-                <div class="contact-container">
-                    <figure class="avatar">
-                        <img src="img/avka2.jpg" alt="Vladislav photo">
-                        <figcaption>
-                            <span class="about-image-title">Photo by <a class="about-text_link" href="https://vk.com/id155777295" target="_blank">Anastasia Grib</a></span>
-                        </figcaption>
-                    </figure>
-                    <form id="contact-form" role='form' action="//formspree.io/vladislav.valentyukevich@yandex.com" method="POST">
-                        <div class="form-group">
-                            <label class="control-label" for="reply-name">Name *</label>
-                            <input class="form-control" type="text" name="reply-name" required/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="email">Email Address *</label>
-                            <input class="form-control" type="email" name="email" required/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="subject">Subject *</label>
-                            <input class="form-control" type="text" name="subject" required/>
-                        </div>
-                        <div class="form-group">
-                            <label class="control-label" for="message">Message *</label>
-                            <textarea rows="5" class="form-control" name="message" required></textarea>
-                        </div>
+                <ul class="grid">
+                    <li class="projects">
+                        <figure>
+                            <a class="item-hover ajax-link" href="#web-design">
+                                <img class="square-img" src="img/thumbnail/thumbnail1.jpg" alt="">
+                                <figcaption>
+                                    <h3 class="project-title">Web design</h3>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
 
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <button class="btn-submit" type="submit">Submit</button>
-                    </form>
-                </div>
+                    <li class="projects">
+                        <figure>
+                            <a class="item-hover ajax-link" href="#gamedev">
+                                <img class="square-img" src="img/thumbnail/thumbnail2.jpg" alt="">
+                                <figcaption>
+                                    <h3 class="project-title">Game Development</h3>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+
+                    <li class="projects">
+                        <figure>
+                            <a class="item-hover ajax-link" href="#level-design">
+                                <img class="square-img" src="img/thumbnail/thumbnail4.jpg" alt="">
+                                <figcaption>
+                                    <h3 class="project-title">Level Design</h3>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+
+                    <li class="projects">
+                        <figure>
+                            <a class="item-hover ajax-link" href="#3d-modeling">
+                                <img class="square-img" src="img/thumbnail/thumbnail3.jpg" alt="">
+                                <figcaption>
+                                    <h3 class="project-title">3D-Modeling</h3>
+                                </figcaption>
+                            </a>
+                        </figure>
+                    </li>
+                </ul>
+
             </section>
         </main>
         <hr>

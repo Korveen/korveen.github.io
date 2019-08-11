@@ -9,69 +9,101 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/cssreset.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    <script src="js/three.min.js"></script>
-    <script src="js/waves.js"></script>
 </head>
 
-<body>
-    <div class="body-index flex-container">
-        <header>
-            <h1 id="main-header">Vladislav Valentyukevich</h1>
+<body class="body-index">
+    <div class="container">
+        <header class="header">
+            <a href="#" class="logo"><img src="logo.svg" alt="Logo" height="25px"></a>
+            <nav class="menubar menubar-invert">
+                <div class="toggle-menu">
+                    <hr>
+                    <input type="checkbox" id="checkbox" class="toggle-checkbox">
+                    <label for="checkbox" class="toggle-button">Menu</label>
+                    <div class="toggle-container">
+                        <ul class="toggle-list">
+                            <li><a href="works.html" class="toggle-item">Works</a></li>
+                            <li><a href="about.html" class="toggle-item">About</a></li>
+                            <li><a href="contact.html" class="toggle-item">Contact</a></li>
+                        </ul>
+                        <hr>
+                    </div>
+                </div>
+                <ul class="normal-menu">
+                    <li><a class="menu-item" href="works.html">Works</a></li>
+                    <li><a class="menu-item" href="about.html">About</a></li>
+                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </header>
-        <main>
-            <section class="group align-center">
-                <h2 id="submain-header">Just the beginning</h2>
-                <p class="small-description">graphic design + gamedev + programming</p>
-                <a href="projects.html"><button class="btn">View works</button></a>
-            </section>
+        <main class=" flex-container">
+            <h1 class="main-header">Valentyukevich<br>Vladislav</h1>
+            <p class="small-description">web design + gamedev + programming</p>
+            <a href="works.html"><button class="btn">View works</button></a>
         </main>
-        <footer>
+
+        <footer class="footer footer-index">
             <ul class="social">
                 <li>
                     <a href="https://instagram.com/korveen_o" target="_blank">
-                    <span class="fa-stack">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-instagram fa-stack-1x"></i>
                     </span>
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="https://vk.com/korveen" target="_blank">
-                    <span class="fa-stack">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-vk fa-stack-1x"></i>
                     </span>
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="https://facebook.com/korveenO" target="_black">
-                    <span class="fa-stack">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-facebook fa-stack-1x"></i>
                     </span>
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="https://twitter.com/korveen_o" target="_blank">
-                    <span class="fa-stack">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-twitter fa-stack-1x"></i>
                     </span>
-                </a>
+                    </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/vladvalentyukevich/" target="_blank">
-                    <span class="fa-stack">
+                        <span class="fa-stack">
                         <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
                         <i class="fa fa-linkedin fa-stack-1x"></i>
                     </span>
-                </a>
+                    </a>
                 </li>
             </ul>
         </footer>
     </div>
-    <div class="background">
+    <div>
+        <ul id="scene" class="background-scene">
+            <li data-depth=".10" class="layer">
+                <img src="./img/main-bg-1.jpg" class="bgimg">
+            </li>
+            <li data-depth=".15" class="layer">
+                <img src="./img/main-bg-2.png" class="bgimg">
+            </li>
+
+        </ul>
         <div class="background-gradient"></div>
     </div>
+    <script src="js/parallax.js"></script>
+    <script>
+        var scene = document.getElementById('scene');
+        var parallaxInstance = new Parallax(scene);
+    </script>
 </body>
+
 </html>
