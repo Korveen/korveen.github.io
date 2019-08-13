@@ -68,7 +68,7 @@ body {
     animation: fade-in 1.5s linear;
     /* IE 10+, Fx 29+ */
     
-    width: 100%;
+    min-width: 320px;
 }
 
 .body-index {
@@ -116,9 +116,9 @@ canvas {
     left: -5%;
     right: -5%;
     opacity: 0.75;
-    background: #303030;
-    background: radial-gradient(ellipse at center, #303030 0%, #000000 100%);
-    background: -o-radial-gradient(center, ellipse, #303030 0%, #000000 100%);
+    background-color: #303030;
+    background-image: radial-gradient(ellipse at center, #303030 0%, #000000 100%);
+    background-image: -o-radial-gradient(center, ellipse, #303030 0%, #000000 100%);
 }
 
 .background-scene {
