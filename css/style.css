@@ -78,7 +78,7 @@ body {
     left: 0;
     right: 0;
     text-align: center;
-    background-color: #fff;
+    background-color: #303030;
     overflow: hidden;
 }
 
@@ -115,7 +115,7 @@ canvas {
     bottom: -5%;
     left: -5%;
     right: -5%;
-    opacity: 0.75;
+    opacity: 0.25;
     background-color: #303030;
     background-image: radial-gradient(ellipse at center, #303030 0%, #000000 100%);
     background-image: -o-radial-gradient(center, ellipse, #303030 0%, #000000 100%);
@@ -128,6 +128,7 @@ canvas {
     height: 100%;
     width: 100%;
     z-index: -10;
+    opacity: 0.5;
 }
 
 .bgimg {
@@ -529,6 +530,7 @@ article>p>a {
 
 .project-item>img {
     width: 100%;
+    height: auto;
     overflow: hidden;
     object-fit: cover;
     margin: 0 5px 10px;
