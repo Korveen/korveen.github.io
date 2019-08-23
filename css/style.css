@@ -67,7 +67,6 @@ body {
     /* Opera 12+ */
     animation: fade-in 1.5s linear;
     /* IE 10+, Fx 29+ */
-    
     min-width: 320px;
 }
 
@@ -529,6 +528,7 @@ article>p>a {
 }
 
 .project-item>img {
+    display: block;
     width: 100%;
     height: auto;
     overflow: hidden;
