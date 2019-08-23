@@ -529,14 +529,18 @@ article>p>a {
     height: auto;
 }
 
-.project-item>img {
+.img-container {
+    width: 100%;
+    margin: 0 5px 10px;
+    flex: 1 1 280px;
+    overflow: hidden;
+}
+
+.img-container>img {
     display: block;
     width: 100%;
     height: auto;
-    overflow: hidden;
-    /* object-fit: cover; */
-    margin: 0 5px 10px;
-    flex: 1 1 280px;
+    object-fit: cover;
 }
 
 .img-lg {
