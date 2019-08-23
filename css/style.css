@@ -525,11 +525,13 @@ article>p>a {
     display: flex;
     flex-wrap: wrap;
     margin: 0 -5px auto;
+    height: 100%;
 }
 
 .project-item>img {
     display: block;
-    width: 100%;
+    max-width: 100%;
+    height: auto;
     overflow: hidden;
     object-fit: cover;
     margin: 0 5px 10px;
