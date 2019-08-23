@@ -530,7 +530,7 @@ article>p>a {
 .project-item>img {
     display: block;
     width: 100%;
-    height: auto;
+    min-height: 100%;
     overflow: hidden;
     object-fit: cover;
     margin: 0 5px 10px;
