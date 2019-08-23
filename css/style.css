@@ -526,11 +526,12 @@ article>p>a {
     flex-wrap: wrap;
     margin: 0 -5px auto;
     height: 100%;
+    margin-bottom: 50px;
 }
 
 .project-item>img {
     display: block;
-    max-width: 100%;
+    width: 100%;
     height: auto;
     overflow: hidden;
     object-fit: cover;
@@ -578,7 +579,6 @@ article>p>a {
     margin: 0 auto;
     text-align: center;
     margin-top: 10px;
-    margin-bottom: 50px;
 }
 
 .description p {
