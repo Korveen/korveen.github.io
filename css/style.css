@@ -172,7 +172,7 @@ h2 {
     font-weight: 400;
     color: #222;
     text-align: center;
-    padding: 0 20px 30px;
+    padding-bottom: 30px;
 }
 
 .main-header {
@@ -524,7 +524,7 @@ article>p>a {
 .project-item {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 -5px auto;
+    /* margin: 0 -5px auto; */
     margin-bottom: 50px;
     height: auto;
 }
@@ -539,7 +539,7 @@ article>p>a {
 .img-container>img {
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -582,7 +582,7 @@ article>p>a {
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
 }
 
 .description p {
@@ -743,6 +743,19 @@ textarea {
     }
 }
 
+@media screen and (max-width: 768px) {
+    h2 {
+        padding-bottom: 20px;
+    }
+    .projects figure figcaption {
+        margin-top: 5px;
+    }
+    .projects figcaption>.project-title {
+        font-size: 12px;
+        line-height: 1.2em;
+    }
+}
+
 @media screen and (max-width: 680px) {
     .header {
         height: auto;
@@ -783,6 +796,9 @@ textarea {
     }
     .description {
         margin-top: 0;
+    }
+    .description p {
+        line-height: 1.2em;
     }
 }
 
