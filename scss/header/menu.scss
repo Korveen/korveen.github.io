@@ -1,0 +1,160 @@
+/* MENU */
+
+
+.menubar {
+    font-family: "FuturaPTLight";
+    font-size: 12px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-style: normal;
+    width: 100%;
+
+    &_invert_color {
+        transition: all 0.5s ease-out;
+
+        .menu-item:hover {
+            transition: all 0.5s ease-out;
+            color: #fff;
+        }
+
+        & a {
+            &:before {
+                background: #fff;
+            }
+
+            &:after {
+                background: #fff;
+            }
+        }
+        
+    }
+
+    &__toggle {
+        &-menu {
+            display: none;
+            font-size: 18px;
+            color: rgba(153, 153, 153, 0.7);
+            transition: color linear 0.15s;
+            border-radius: 20px;
+            padding-top: 6px;
+            letter-spacing: 3px;
+
+            @media screen and (max-width: 680px) {
+                display: flex;
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__common {
+        &-menu {
+            display: flex;
+            justify-content: flex-end;
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
+
+            & li {
+                margin-right: 30px;
+
+                &:last-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+.toggle
+{
+    &-button {
+        margin: 20px 0;
+
+        &:hover {
+            cursor: pointer;
+
+        }
+    }
+
+    &-item {
+        display: block;
+        line-height: 2.5em;
+        color: rgba(153, 153, 153, 0.7);
+    }
+
+    &-checkbox {
+        display: none;
+
+        &:checked {
+            &~.toggle-container {
+                margin-top: 0;
+                opacity: 1;
+                transition-delay: 0s;
+            }
+        }
+    }
+
+    &-container {
+        margin-top: -142px;
+        transition: .5s;
+        opacity: 0;
+    }
+
+    &_active {
+        color: #999 !important;
+    }
+}
+
+.menu-item {
+    display: inline-block;
+    position: relative;
+    padding: 3px 0;
+    line-height: 24px;
+    color: #999;
+
+    &:before {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 0;
+        background: #000;
+        transition: all 0.2s ease-in-out;
+        left: 50%;
+        bottom: 0;
+    }
+
+    &:after {
+        display: block;
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 0;
+        background-color: #000;
+        transition: all 0.2s ease-in-out;
+        left: 50%;
+        bottom: 0;
+    }
+
+    &:hover {
+        color: #111;
+        transition: all 0.5s ease-out;
+
+        &:before {
+            width: 50%;
+            left: 0;
+        }
+
+        &:after {
+            width: 50%;
+
+        }
+    }
+
+    &_active {
+        color: #111 !important;
+    }
+}
