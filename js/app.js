@@ -42,7 +42,8 @@ function LoadInfo(url) {
         elem.style.overflow = 'hidden';
         data = document.querySelector('main').insertBefore(elem, document.querySelector('main').firstChild);
 
-        let l = data.querySelectorAll('.project-controls a');
+        // регистрация листенеров ссылок навигации на подгруженную страницу
+        let l = data.querySelectorAll('.project-navigation a');
         l.forEach(link => {
             link.addEventListener("click", elem => {
                 if (elem.target.getAttribute('href').substr(1) == '') {

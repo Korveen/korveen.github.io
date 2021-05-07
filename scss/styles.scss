@@ -100,13 +100,6 @@ canvas {
     margin-top: -45%;
 }
 
-.flex-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .header {
     display: flex;
     justify-content: space-between;
@@ -191,7 +184,7 @@ hr {
 }
 
 section {
-    padding: 50px 0 30px 0;
+    margin: 50px 0 30px 0;
     opacity: 1;
     position: relative;
 }
@@ -212,18 +205,18 @@ section {
 article {
     margin-left: 30px;
     width: 50%;
-}
 
-article>p {
-    font-family: "FuturaPTLight";
-    font-size: 22px;
-    text-indent: 1em;
-    line-height: 1.5em;
-    text-transform: none;
-    text-decoration: none;
-    font-weight: 400;
-    font-style: normal;
-    margin: 0 0 1em;
+    &>p {
+        font-family: "FuturaPTLight";
+        font-size: 22px;
+        text-indent: 1em;
+        line-height: 1.5em;
+        text-transform: none;
+        text-decoration: none;
+        font-weight: 400;
+        font-style: normal;
+        margin: 0 0 1em;
+    }
 }
 
 /* ABOUT */
@@ -284,38 +277,46 @@ article>p>a {
 
 /* LOADED PROJECTS */
 
-.grid {
+.flex-container {
     display: flex;
-    flex-wrap: wrap;
-    margin: 0 -10px auto;
+
 }
 
-.projects {
-    flex: 1 1 280px;
-    margin: 0 10px 30px;
+.flex {
+    &-container {
+        display: flex;
+    }
 
-    & figure {
-        & img {
-            height: 280px;
-            width: 100%;
-            overflow: hidden;
-            object-fit: cover;
-        }
+    &_column {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-        & figcaption {
-            margin-top: 10px;
+    &_row {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 -10px auto;
+    }
 
-            &>.image-title {
-                font-family: "FuturaPTLight";
-                font-size: 14px;
-                line-height: 1.5em;
-                text-decoration: none;
-                font-weight: 400;
-                font-style: normal;
-                color: #707070;
+    &-case {
+        flex: 1 1 280px;
+        margin: 0 10px 30px;
+
+
+        .case {
+            &-img {
+                height: 280px;
+                width: 100%;
+                overflow: hidden;
+                object-fit: cover;
             }
 
-            &>.project-title {
+            &-caption {
+                margin-top: 10px;
+            }
+
+            &-title {
                 font-family: "FuturaPTLight";
                 font-size: 14px;
                 line-height: 1.5em;
@@ -329,6 +330,7 @@ article>p>a {
         }
     }
 }
+
 
 .item-hover {
     display: block;
@@ -350,29 +352,53 @@ article>p>a {
     }
 }
 
-
-.project-item {
-    display: flex;
-    flex-wrap: wrap;
-    /* margin: 0 -5px auto; */
-    margin-bottom: 50px;
-    height: auto;
-}
-
 //loaded
-.img-container {
-    width: 100%;
-    margin: 0 5px 10px;
-    flex: 1 1 280px;
-    overflow: hidden;
+
+#project-data {
+    .project {
+        &:first-child {
+            padding-bottom: 0;
+            padding-top: 0;
+        }
+
+        &-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            /* margin: 0 -5px auto; */
+            margin-bottom: 50px;
+            height: auto;
+
+            .gallery-image-container {
+                width: 100%;
+                margin: 0 5px 10px;
+                flex: 1 1 280px;
+                overflow: hidden;
+
+                &>img {
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+        &-navigation {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 50px;
+            text-transform: uppercase !important;
+            font-size: 11px;
+            letter-spacing: 3px;
+
+            & .nav-arrow {
+                color: #999;
+            }
+        }
+    }
 }
 
-.img-container>img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
 
 .img-lg {
     flex-basis: 100% !important;
@@ -390,40 +416,37 @@ article>p>a {
     flex-basis: calc(25% - 20px) !important;
 }
 
-#project-data>section:first-child {
-    padding-bottom: 0;
-    padding-top: 0;
-}
 
-.project-controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 50px;
-    text-transform: uppercase !important;
-    font-size: 11px;
-    letter-spacing: 3px;
-}
-
-.project-nav {
-    color: #999;
-}
 
 .description {
     width: 100%;
     margin: 0 auto;
     text-align: center;
     /* margin-top: 10px; */
-}
 
-.description p {
-    font-family: "FuturaPTLight";
-    font-size: 18px;
-    line-height: 1.6em;
-    text-transform: none;
-    text-decoration: none;
-    font-style: italic;
-    color: #777;
+    p {
+        font-family: "FuturaPTLight";
+        font-size: 18px;
+        line-height: 1.6em;
+        text-transform: none;
+        text-decoration: none;
+        font-style: italic;
+        color: #777;
+    }
+
+    a {
+        padding-bottom: .05em;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+        border-bottom-color: rgba(82, 82, 82, 0.18);
+
+        transition: border-color 0.5s ease-out;
+
+        &:hover {
+            border-bottom-color: rgb(82, 82, 82);
+        }
+    }
+
 }
 
 
@@ -552,23 +575,28 @@ textarea {
         align-items: stretch;
         text-align: justify;
     }
+
     article {
         margin-top: 30px;
         margin-left: 0;
         width: 100%;
     }
+
     .about-text figure img {
         height: auto;
     }
+
     .contact-container {
         flex-direction: column;
         align-items: stretch;
     }
+
     #contact-form {
         margin-left: 0;
         width: 100%;
         margin-top: 30px;
     }
+
     .avatar {
         width: 100%;
     }
@@ -578,12 +606,16 @@ textarea {
     h2 {
         padding-bottom: 20px;
     }
-    .projects figure figcaption {
-        margin-top: 5px;
-    }
-    .projects figcaption>.project-title {
-        font-size: 12px;
-        line-height: 1.2em;
+
+    .case {
+        &-caption {
+            margin-top: 5px;
+        }
+
+        &-title {
+            font-size: 12px;
+            line-height: 1.2em;
+        }
     }
 }
 
@@ -595,12 +627,15 @@ textarea {
         text-align: center;
         padding: 0 30px;
     }
+
     .wrap {
         padding: 0 30px;
     }
+
     .h1__index {
         font-size: 9vw;
     }
+
     .logo {
         text-align: center;
         margin: 30px 0;
@@ -610,18 +645,23 @@ textarea {
         display: flex;
         justify-content: center;
     }
+
     .img-md {
         flex-basis: 100% !important;
     }
+
     .img-sm {
         flex-basis: calc(50% - 20px) !important;
     }
+
     .img-xs {
         flex-basis: calc(50% - 20px) !important;
     }
+
     .description {
         margin-top: 0;
     }
+
     .description p {
         line-height: 1.2em;
     }
@@ -637,20 +677,25 @@ textarea {
     .h1__index {
         margin-bottom: 10px;
     }
+
     .footer {
         margin: 20px 0;
     }
+
     #submain-header {
         margin-bottom: 0;
     }
+
     .small-description {
         margin-bottom: 10px;
         font-size: 14px;
     }
+
     .btn {
         padding: 10px 15px 10px;
         font-size: 13px;
     }
+
     .social li {
         font-size: 0.7em;
     }
@@ -675,4 +720,3 @@ textarea {
         height: 150%;
     }
 }
-
