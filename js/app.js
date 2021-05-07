@@ -1,7 +1,9 @@
-var data, url;
 
 document.addEventListener('DOMContentLoaded', function() {
-    let links = document.querySelectorAll('a.item-hover.ajax-link');
+let url;
+let data;
+
+    let links = document.querySelectorAll('a.ajax-link.item-hover');
     links.forEach(link => {
         link.addEventListener('click', elem => {
             if (url != link.getAttribute('href').substr(1)) {
@@ -16,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-
 
     SquareImage();
 });
@@ -36,9 +36,10 @@ function SquareImage() {
 
 function LoadInfo(url) {
     ajax.get("./includes/" + url + ".html", function(xhttp) {
+        let data;
         let elem = document.createElement('div');
         elem.innerHTML = xhttp;
-        // elem.style.overflow = 'hidden';
+        elem.style.overflow = 'hidden';
         data = document.querySelector('main').insertBefore(elem, document.querySelector('main').firstChild);
 
         let l = data.querySelectorAll('.project-controls a');
