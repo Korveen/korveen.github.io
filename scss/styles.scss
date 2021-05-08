@@ -18,6 +18,10 @@ a {
     color: #000;
 }
 
+textarea {
+    resize: none;
+}
+
 .body {
     -webkit-animation: fade-in 1.5s linear;
     /* Safari 4+ */
@@ -201,39 +205,55 @@ section {
     color: #fff;
 }
 
-
-article {
-    margin-left: 30px;
-    width: 50%;
-
-    &>p {
-        font-family: "FuturaPTLight";
-        font-size: 22px;
-        text-indent: 1em;
-        line-height: 1.5em;
-        text-transform: none;
-        text-decoration: none;
-        font-weight: 400;
-        font-style: normal;
-        margin: 0 0 1em;
-    }
-}
-
-/* ABOUT */
 article>p>a {
     color: #111 !important;
 }
 
+
 .about {
-    &-text {
+    &-container {
         display: flex;
         flex-direction: row;
         align-items: flex-start;
         text-align: justify;
 
-        & figure img {
-            height: auto;
-            width: 100%;
+        .about {
+            &-image {
+                height: auto;
+                width: 100%;
+
+                &-title {
+                    font-family: "FuturaPTLight";
+                    font-size: 16px;
+                    line-height: 1.6em;
+                    text-transform: none;
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-style: normal;
+                }
+            }
+
+            &-figure {
+                width: 50%;
+            }
+
+            &-text {
+                margin-left: 30px;
+                width: 50%;
+
+                &-paragraph {
+                    font-family: "FuturaPTLight";
+                    font-size: 22px;
+                    text-indent: 1em;
+                    line-height: 1.5em;
+                    text-transform: none;
+                    text-decoration: none;
+                    font-weight: 400;
+                    font-style: normal;
+                    margin: 0 0 1em;
+                }
+            }
+
         }
 
         &_link {
@@ -259,28 +279,9 @@ article>p>a {
             }
         }
     }
-
-    &-image-title {
-        font-family: "FuturaPTLight";
-        font-size: 16px;
-        line-height: 1.6em;
-        text-transform: none;
-        text-decoration: none;
-        font-weight: 400;
-        font-style: normal;
-    }
-}
-
-.avatar {
-    width: 50%;
 }
 
 /* LOADED PROJECTS */
-
-.flex-container {
-    display: flex;
-
-}
 
 .flex {
     &-container {
@@ -359,6 +360,26 @@ article>p>a {
         &:first-child {
             padding-bottom: 0;
             padding-top: 0;
+        }
+
+        &-content {
+            display: block;
+            max-width: 1000px;
+            margin: auto;
+
+
+            .content-text {
+                font-family: "FuturaPTLight";
+                font-size: 22px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 140%;
+                text-transform: none;
+                text-decoration: none;
+                text-align: justify;
+
+                margin: 0 0 1em;
+            }
         }
 
         &-gallery {
@@ -487,9 +508,7 @@ article>p>a {
     font-style: normal;
 }
 
-textarea {
-    resize: none;
-}
+
 
 .form-control {
     padding: 10px;
@@ -570,21 +589,36 @@ textarea {
 /*----- Responsive -----*/
 
 @media screen and (max-width: 820px) {
-    .about-text {
-        flex-direction: column;
-        align-items: stretch;
-        text-align: justify;
+
+
+    .about {
+        &-container {
+            flex-direction: column;
+            align-items: stretch;
+            text-align: justify;
+
+            margin-top: 30px;
+            margin-left: 0;
+            width: 100%;
+
+            .about {
+                &-image {
+                    height: auto;
+                }
+
+                &-figure {
+                    width: 100%;
+                }
+
+                &-text {
+                    width: 100%;
+                    margin: 0;
+                    margin-top: 30px;
+                }
+            }
+        }
     }
 
-    article {
-        margin-top: 30px;
-        margin-left: 0;
-        width: 100%;
-    }
-
-    .about-text figure img {
-        height: auto;
-    }
 
     .contact-container {
         flex-direction: column;
@@ -595,10 +629,6 @@ textarea {
         margin-left: 0;
         width: 100%;
         margin-top: 30px;
-    }
-
-    .avatar {
-        width: 100%;
     }
 }
 
@@ -660,10 +690,10 @@ textarea {
 
     .description {
         margin-top: 0;
-    }
 
-    .description p {
-        line-height: 1.2em;
+        & p {
+            line-height: 1.2em;
+        }
     }
 }
 
