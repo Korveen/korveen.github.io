@@ -1,7 +1,7 @@
+let data;
 
 document.addEventListener('DOMContentLoaded', function() {
 let url;
-let data;
 
     let links = document.querySelectorAll('a.ajax-link.item-hover');
     links.forEach(link => {
@@ -36,7 +36,6 @@ function SquareImage() {
 
 function LoadInfo(url) {
     ajax.get("./includes/" + url + ".html", function(xhttp) {
-        let data;
         let elem = document.createElement('div');
         elem.innerHTML = xhttp;
         elem.style.overflow = 'hidden';
