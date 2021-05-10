@@ -1,0 +1,115 @@
+<section id="project-data">
+
+    <section class="project">
+        <h2>WARTA app Game Launcher // 2020-2021</h2>
+        <div class="project-content">
+            <p class="content-text">
+                Fully implemented the game launcher for The Last Frontier VR project. Designed UI (via Figma) of the
+                application, thought out the user behavior, then implemented the logic and user interaction using C# and
+                WPF (Visual Studio, Blend for Visual Studio, Git).</p>
+        </div>
+        <figure class="project-gallery">
+            <div class="gallery-image-container img-lg"><img src="./img/warta-app/warta-app-main.jpg"
+                    alt="warta app main page"></div>
+            <figcaption class="description">
+                <span>WARTA App Launcher // 2020-2021</span>
+            </figcaption>
+        </figure>
+        <div class="project-content">
+            <p class="content-text">Since the project The Last Frontier VR is a rather specific project (vending
+                attraction), the launcher
+                has several specific and different functions compared to ordinary PC launchers, namely, setting up the
+                calibration of the attraction sensors for different game maps.</p>
+            <p class="content-text">The launcher has a self-updating module and support for several versions: stable and
+                beta (for testing experimental features in the production stage)</p>
+            <p class="content-text">Implemented downloading and updating the game client. There is support for choosing
+                which version of the game to download: stable or beta version (to be able to download the beta-client,
+                you need to enter the secret keyword in a special field)</p>
+        </div>
+        <figure class="project-gallery">
+            <div class="gallery-image-container img-lg"><img src="./img/warta-app/warta-app-settings.gif"
+                    alt="warta app - settings"></div>
+            <figcaption class="description">
+                <span>WARTA App Launcher - Settings</span>
+            </figcaption>
+        </figure>
+        <div class="project-content">
+            <p class="content-text"> In the implementation of the launcher, the MVVM design pattern is used. There is a
+                logging of critical errors in
+                a separate file. You can enable a visual display of the leaderboard in the Main window. Implemented the
+                function
+                of automatic detection of the COM port of the plug-in custom controller and the choice of the sound
+                output
+                channel for the Buttkicker (one of the key features of the attraction)</p>
+            <p class="content-text">Language module allows to easily add different localizations for the application
+                (currently supported languages: Russian and English). Localization texts are stored in separate files
+                and can be easily edited.</p>
+        </div>
+
+        <figure class="project-gallery">
+            <div class="gallery-image-container img-sm"><img src="./img/warta-app/warta-app-popup-feedback.jpg"
+                    alt="warta app - feedpack popup window"></div>
+            <div class="gallery-image-container img-sm"><img src="./img/warta-app/warta-app-popup-last-battle.jpg"
+                    alt="warta app - last battle popup window"></div>
+            <div class="gallery-image-container img-sm"><img src="./img/warta-app/warta-app-popup-whats-new.jpg"
+                    alt="warta app - whats new popup window"></div>
+            <figcaption class="description">
+                <span>WARTA App Launcher - Popups</span>
+            </figcaption>
+        </figure>
+
+        </div>
+    </section>
+    <hr>
+    <section class="project">
+        <h2>Tools and plugins</h2>
+        <div class="project-content">
+            <h3 class="content-header">Warta App Manifest Builder</h3>
+            <p class="content-text">Implemented a mini-app for generating a Manifest file. The manifest file is needed
+                to
+                determine the list of files that need to be downloaded when updating the game client. The manifest file
+                stores data in JSON format.</p>
+            <p class="content-text">This file is stored on the server and the launcher accesses it to get the current
+                version of the game and the list of files.</p>
+            <figure class="project-gallery">
+                <div class="gallery-image-container"><img src="./img/vr-warta-builder/warta-manifest-builder.jpg"
+                        alt="Child_Phobia_Nightcoming_Fears photo 6"></div>
+                <figcaption class="description">
+                    <span>WARTA App Manifest Builder // 2021</span>
+                </figcaption>
+            </figure>
+        </div>
+        <div class="project-content">
+            <h3 class="content-header">Unity Custom Inspector</h3>
+            <p class="content-text">During the development of projects, quite often there is a need for additional
+                convenience in working with Inspector. The project has implemented non-standard Inspector (with Gizmos
+                visualization) for some massive Plugins and Components (for example, Player Controller and Controller
+                for AI, Enemy components and Shooting system).</p>
+        </div>
+        <figure class="project-gallery">
+            <div class="gallery-image-container"><img src="./img/unity-custom/unity-custom.jpg"
+                    alt="Child_Phobia_Nightcoming_Fears photo 6"></div>
+            <figcaption class="description">
+                <span>Custom Unity Inspector & Tools</span>
+            </figcaption>
+        </figure>
+        <div class="project-content">
+            <h3 class="content-header">Unity Editor Extensions and Tools</h3>
+            <p class="content-text">Implemented custom systems and additional tools (localization system, pooling
+                system, parameters saving system, developer console), new UI components (tab group, flexable
+                grid layout, animated banners, etc.)</p>
+            <video class="project-video" autoplay loop controls src="./img/unity-custom/unity-weather-tool.webm" type="video/webm;"
+                alt="unity weather tool"></video>
+        </div>
+    </section>
+    <hr>
+
+    <nav class="project-navigation">
+        <div class="ajax-link"><a href="#">Back to Vladislav Valentyukevich // Works</a></div>
+        <div>
+            <span class="nav-arrow">
+                <a href="#gamedev">PREV</a> / <a href="#level-and-3d">NEXT</a>
+            </span>
+        </div>
+    </nav>
+</section>

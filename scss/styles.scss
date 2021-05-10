@@ -32,6 +32,7 @@ textarea {
     animation: fade-in 1.5s linear;
     /* IE 10+, Fx 29+ */
     min-width: 320px;
+    max-width: 1920px;
 
     &-index {
         position: absolute;
@@ -69,7 +70,6 @@ canvas {
     bottom: 0;
     z-index: -5;
 }
-
 
 .background {
     &-gradient {
@@ -297,12 +297,12 @@ article>p>a {
     &_row {
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0 -10px auto;
+        margin: 0 -20px auto;
     }
 
     &-case {
         flex: 1 1 280px;
-        margin: 0 10px 30px;
+        margin: 0 20px 30px;
 
 
         .case {
@@ -368,18 +368,33 @@ article>p>a {
             margin: auto;
 
 
-            .content-text {
-                font-family: "FuturaPTLight";
-                font-size: 22px;
-                font-weight: 400;
-                font-style: normal;
-                line-height: 140%;
-                text-transform: none;
-                text-decoration: none;
-                text-align: justify;
+            .content {
+                &-header {
+                    font-family: "FuturaPTBold";
+                    font-size: 24px;
+                    margin: 0 0 0.7em;
+                    font-style: italic;
 
-                margin: 0 0 1em;
+                }
+
+                &-text {
+                    font-family: "FuturaPTLight";
+                    font-size: 22px;
+                    font-weight: 400;
+                    font-style: normal;
+                    line-height: 140%;
+                    text-transform: none;
+                    text-decoration: none;
+                    text-align: justify;
+
+                    margin: 0 0 1em;
+                }
             }
+        }
+
+        &-video {
+            display: block;
+            width: 100%;
         }
 
         &-gallery {
@@ -421,23 +436,23 @@ article>p>a {
 }
 
 
-.img-lg {
-    flex-basis: 100% !important;
+.img {
+    &-lg {
+        flex-basis: 100% !important;
+    }
+
+    &-md {
+        flex-basis: calc(50% - 20px) !important;
+    }
+
+    &-sm {
+        flex-basis: calc(33.33333% - 20px) !important;
+    }
+
+    &-xs {
+        flex-basis: calc(25% - 40px) !important;
+    }
 }
-
-.img-md {
-    flex-basis: calc(50% - 20px) !important;
-}
-
-.img-sm {
-    flex-basis: calc(33.33333% - 20px) !important;
-}
-
-.img-xs {
-    flex-basis: calc(25% - 20px) !important;
-}
-
-
 
 .description {
     width: 100%;
@@ -445,7 +460,7 @@ article>p>a {
     text-align: center;
     /* margin-top: 10px; */
 
-    p {
+    span {
         font-family: "FuturaPTLight";
         font-size: 18px;
         line-height: 1.6em;
@@ -546,11 +561,11 @@ article>p>a {
 
 .footer {
     margin: 30px 0;
-}
 
-.footer-index {
-    display: flex;
-    justify-content: center;
+    &-index {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .social {
@@ -676,22 +691,25 @@ article>p>a {
         justify-content: center;
     }
 
-    .img-md {
-        flex-basis: 100% !important;
+    .img {
+        &-md {
+            flex-basis: 100% !important;
+        }
+
+        &-sm {
+            flex-basis: calc(50% - 20px) !important;
+        }
+
+        &-xs {
+            flex-basis: calc(50% - 20px) !important;
+        }
     }
 
-    .img-sm {
-        flex-basis: calc(50% - 20px) !important;
-    }
-
-    .img-xs {
-        flex-basis: calc(50% - 20px) !important;
-    }
 
     .description {
         margin-top: 0;
 
-        & p {
+        & span {
             line-height: 1.2em;
         }
     }
