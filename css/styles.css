@@ -84,6 +84,7 @@ textarea {
   animation: fade-in 1.5s linear;
   /* IE 10+, Fx 29+ */
   min-width: 320px;
+  max-width: 1920px;
 }
 
 .body-index {
@@ -522,14 +523,14 @@ article > p > a {
           flex-direction: row;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  margin: 0 -10px auto;
+  margin: 0 -20px auto;
 }
 
 .flex-case {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 280px;
           flex: 1 1 280px;
-  margin: 0 10px 30px;
+  margin: 0 20px 30px;
 }
 
 .flex-case .case-img {
@@ -587,6 +588,13 @@ article > p > a {
   margin: auto;
 }
 
+#project-data .project-content .content-header {
+  font-family: "FuturaPTBold";
+  font-size: 24px;
+  margin: 0 0 0.7em;
+  font-style: italic;
+}
+
 #project-data .project-content .content-text {
   font-family: "FuturaPTLight";
   font-size: 22px;
@@ -597,6 +605,11 @@ article > p > a {
   text-decoration: none;
   text-align: justify;
   margin: 0 0 1em;
+}
+
+#project-data .project-video {
+  display: block;
+  width: 100%;
 }
 
 #project-data .project-gallery {
@@ -664,8 +677,8 @@ article > p > a {
 }
 
 .img-xs {
-  -ms-flex-preferred-size: calc(25% - 20px) !important;
-      flex-basis: calc(25% - 20px) !important;
+  -ms-flex-preferred-size: calc(25% - 40px) !important;
+      flex-basis: calc(25% - 40px) !important;
 }
 
 .description {
@@ -675,7 +688,7 @@ article > p > a {
   /* margin-top: 10px; */
 }
 
-.description p {
+.description span {
   font-family: "FuturaPTLight";
   font-size: 18px;
   line-height: 1.6em;
@@ -925,7 +938,7 @@ article > p > a {
   .description {
     margin-top: 0;
   }
-  .description p {
+  .description span {
     line-height: 1.2em;
   }
 }
